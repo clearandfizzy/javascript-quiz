@@ -70,6 +70,16 @@ const Quiz: React.FC = () => {
                         <div className="my-4 bg-gray-100 p-3 rounded text-gray-700">
                             <span dangerouslySetInnerHTML={{__html: q.explanation}}/>
                         </div>
+                        <div className="my-2">
+                            <a
+                                href={`https://copilot.microsoft.com/?q=${encodeURIComponent(q.text)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 underline hover:text-blue-800"
+                            >
+                                Learn more about this question (opens in a new tab)
+                            </a>
+                        </div>
                         <div className="mt-4 flex justify-between items-center text-base text-gray-800">
                             <span className="font-semibold">Score: {score} / {questions.length}</span>
                             <button onClick={next}
