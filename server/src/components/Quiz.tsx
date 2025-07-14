@@ -1,6 +1,8 @@
 // src/components/Quiz.tsx
 import React, {useState} from 'react';
 import {questions} from '@/data/local-questions';
+import {useResults} from '@/context/ResultsProvider';
+import {useRouter} from 'next/router';
 
 const Quiz: React.FC = () => {
     const [idx, setIdx] = useState(0);
@@ -8,18 +10,26 @@ const Quiz: React.FC = () => {
     const [answered, setAnswered] = useState(false);
     const [selected, setSelected] = useState<number | undefined>(undefined);
     const q = questions[idx];
+    const {results, setResults} = useResults();
+    const router = useRouter();
 
     const choose = (i: number) => {
         if (answered) return;
         setSelected(i);
         setAnswered(true);
-        if (i === q.correctIndex) setScore(s => s + 1);
+        const correct = i === q.correctIndex;
+        if (correct) setScore(s => s + 1);
+        setResults([...results, {questionIndex: idx, correct}]);
     };
 
     const next = () => {
+        if (idx === questions.length - 1) {
+            router.push('/results');
+            return;
+        }
         setAnswered(false);
         setSelected(undefined);
-        setIdx(i => (i + 1) % questions.length);
+        setIdx(i => i + 1);
     };
 
     return (
@@ -62,9 +72,20 @@ const Quiz: React.FC = () => {
                         </div>
                         <div className="mt-4 flex justify-between items-center text-base text-gray-800">
                             <span className="font-semibold">Score: {score} / {questions.length}</span>
-                            <button onClick={next} className="px-5 py-2 bg-blue-600 text-white rounded font-semibold shadow hover:bg-blue-700 transition">
+                            <button onClick={next}
+                                    className="px-5 py-2 bg-blue-600 text-white rounded font-semibold shadow hover:bg-blue-700 transition">
                                 Next
                             </button>
+                        </div>
+                        <div className="mt-4">
+                            <h3 className="font-bold">Results so far:</h3>
+                            <ul className="list-disc ml-6">
+                                {results.map((r, i) => (
+                                    <li key={i}>
+                                        Question {r.questionIndex + 1}: {r.correct ? "Correct" : "Incorrect"}
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
                     </>
                 )}
