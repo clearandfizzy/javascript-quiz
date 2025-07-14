@@ -1,8 +1,7 @@
 FROM node:20-alpine
 
-RUN apk add --no-cache bash nodejs npm openjdk11-jre
+RUN apk add --no-cache bash nodejs npm
 RUN npm	install -g npm
-RUN npm install -g firebase-tools
 
 WORKDIR /app
 

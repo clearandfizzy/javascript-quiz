@@ -16,10 +16,6 @@ dev:
 	docker-compose exec ${BOX_REACTJS} bash -c "\
 			npm run dev"
 
-firebase: ## Start Firebase emulator
-	docker-compose exec ${BOX_REACTJS} bash -c "\
-			npm run firebase"
-
 compile: ## New task for file merging
 	make start
 	@docker-compose exec ${BOX_REACTJS} bash -c "\

@@ -1,107 +1,74 @@
 // src/components/Quiz.tsx
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {questions} from '../data/questions.ts';
 
 const Quiz: React.FC = () => {
     const [idx, setIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
+    const [selected, setSelected] = useState<number | undefined>(undefined);
     const q = questions[idx];
 
     const choose = (i: number) => {
         if (answered) return;
+        setSelected(i);
         setAnswered(true);
         if (i === q.correctIndex) setScore(s => s + 1);
     };
 
     const next = () => {
         setAnswered(false);
+        setSelected(undefined);
         setIdx(i => (i + 1) % questions.length);
     };
 
     return (
-        <div className="quiz-container" style={{
-            maxWidth: 400,
-            margin: '2rem auto',
-            padding: '2rem',
-            border: '1px solid #e0e0e0',
-            borderRadius: 12,
-            background: '#fafbfc',
-            fontFamily: 'Roboto, Arial, sans-serif',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
-        }}>
-            <h2 style={{fontSize: '1.3rem', marginBottom: '1.5rem', fontWeight: 500, color: '#222'}}>{q.text}</h2>
-            <ul style={{listStyle: 'none', padding: 0}}>
-                {q.choices.map((c, i) => (
-                    <li key={i} style={{marginBottom: '0.75rem'}}>
-                        <button
-                            onClick={() => choose(i)}
-                            style={{
-                                width: '100%',
-                                padding: '0.75rem',
-                                fontSize: '1rem',
-                                fontFamily: 'Roboto, Arial, sans-serif',
-                                background: answered ? (i === q.correctIndex ? '#e6f9e6' : '#f5f5f5') : '#fff',
-                                border: answered
-                                    ? i === q.correctIndex
-                                        ? '2px solid #4caf50'
-                                        : '1px solid #ccc'
-                                    : '1px solid #ccc',
-                                opacity: answered && i !== q.correctIndex ? 0.6 : 1,
-                                cursor: answered ? 'default' : 'pointer',
-                                borderRadius: 6,
-                                transition: 'all 0.2s',
-                                fontWeight: answered && i === q.correctIndex ? 500 : 400,
-                                color: '#222',
-                                boxShadow: answered && i === q.correctIndex ? '0 0 4px #4caf50' : 'none'
-                            }}
-                        >
-                            {c}
-                        </button>
-                    </li>
-                ))}
-            </ul>
-            {answered && (
-                <>
-                    <div key={1} style={{
-                        margin: '1rem 0',
-                        background: '#f0f4f8',
-                        padding: '0.75rem',
-                        borderRadius: 6,
-                        fontSize: '0.98rem',
-                        color: '#333',
-                        fontFamily: 'Roboto, Arial, sans-serif'
-                    }}>
-                        <span dangerouslySetInnerHTML={{__html: q.explanation}}/>
+        <div className="quiz-container max-w-md mx-auto mt-8 p-8 border rounded-xl bg-white shadow">
+            <form
+                onSubmit={e => {
+                    e.preventDefault();
+                    if (!answered) setAnswered(true);
+                }}
+            >
+                <fieldset className="border-0 p-0 m-0">
+                    <legend className="text-xl mb-6 font-semibold text-gray-800">{q.text}</legend>
+                    <div className="space-y-3">
+                        {q.choices.map((c, i) => (
+                            <label key={i} className="block cursor-pointer">
+                                <input
+                                    type="radio"
+                                    name="choice"
+                                    value={i}
+                                    checked={selected === i}
+                                    disabled={answered}
+                                    onChange={() => choose(i)}
+                                    className="hidden peer"
+                                />
+                                <span
+                                    className={`inline-block w-full px-4 py-3 rounded-lg border text-base transition
+                                        peer-checked:bg-green-100 peer-checked:border-green-500
+                                        peer-disabled:opacity-60
+                                        bg-white border-gray-300 hover:bg-gray-50
+                                    `}
+                                >{c}</span>
+                            </label>
+                        ))}
                     </div>
-                    <div key={2} style={{
-                        marginTop: '1rem',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                        fontFamily: 'Roboto, Arial, sans-serif',
-                        fontSize: '1rem',
-                        color: '#222'
-                    }}>
-                        <span style={{fontWeight: 500}}>Score: {score} / {questions.length}</span>
-                        <button onClick={next} style={{
-                            padding: '0.5rem 1.2rem',
-                            border: 'none',
-                            background: '#007bff',
-                            color: '#fff',
-                            borderRadius: 6,
-                            fontWeight: 500,
-                            fontFamily: 'Roboto, Arial, sans-serif',
-                            fontSize: '1rem',
-                            boxShadow: '0 2px 6px rgba(0,123,255,0.08)',
-                            cursor: 'pointer',
-                            transition: 'background 0.2s'
-                        }}>
-                            Next
-                        </button>
-                    </div>
-                </>
-            )}
+                </fieldset>
+                {answered && (
+                    <>
+                        <div className="my-4 bg-gray-100 p-3 rounded text-gray-700">
+                            <span dangerouslySetInnerHTML={{__html: q.explanation}}/>
+                        </div>
+                        <div className="mt-4 flex justify-between items-center text-base text-gray-800">
+                            <span className="font-semibold">Score: {score} / {questions.length}</span>
+                            <button onClick={next} className="px-5 py-2 bg-blue-600 text-white rounded font-semibold shadow hover:bg-blue-700 transition">
+                                Next
+                            </button>
+                        </div>
+                    </>
+                )}
+            </form>
         </div>
     );
 };
