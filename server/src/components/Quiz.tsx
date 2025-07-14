@@ -1,5 +1,5 @@
 // src/components/Quiz.tsx
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {questions} from '@/data/questions';
 import {useResults} from '@/context/ResultsProvider';
 import {useRouter} from 'next/router';
@@ -9,14 +9,37 @@ const Quiz: React.FC = () => {
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
     const [selected, setSelected] = useState<number | undefined>(undefined);
+    const [timerStarted, setTimerStarted] = useState(false);
+    const [secondsElapsed, setSecondsElapsed] = useState<number | null>(null);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
     const q = questions[idx];
     const {results, setResults} = useResults();
     const router = useRouter();
+
+    useEffect(() => {
+        if (timerStarted && secondsElapsed === null) {
+            setSecondsElapsed(Math.floor(Date.now() / 1000));
+        }
+    }, [timerStarted, secondsElapsed]);
+
+    useEffect(() => {
+        if (idx === questions.length - 1 && intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    }, [idx]);
+
+    const handleFirstAnswer = () => {
+        if (!timerStarted) {
+            setTimerStarted(true);
+            setSecondsElapsed(Math.floor(Date.now() / 1000));
+        }
+    };
 
     const choose = (i: number) => {
         if (answered) return;
         setSelected(i);
         setAnswered(true);
+        handleFirstAnswer();
         const correct = i === q.correctIndex;
         if (correct) setScore(s => s + 1);
         setResults([...results, {questionIndex: idx, correct}]);
@@ -88,6 +111,11 @@ const Quiz: React.FC = () => {
                                 Next
                             </button>
                         </div>
+                        {timerStarted && secondsElapsed !== null && (
+                            <div className="my-4 p-4 text-left bg-green-200">
+                                Time elapsed: {String(Math.floor((Math.floor(Date.now() / 1000) - secondsElapsed) / 60)).padStart(2, '0')}:{String((Math.floor(Date.now() / 1000) - secondsElapsed) % 60).padStart(2, '0')}
+                            </div>
+                        )}
                         <div className="mt-4">
                             <h3 className="font-bold">Results so far:</h3>
                             <ul className="list-disc ml-6">
