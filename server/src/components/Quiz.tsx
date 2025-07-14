@@ -33,7 +33,7 @@ const Quiz: React.FC = () => {
     };
 
     return (
-        <div className="quiz-container max-w-md mx-auto mt-2 sm:mt-8 sm:p-8 sm:border sm:rounded-xl sm:bg-white sm:shadow">
+        <div className="quiz-container max-w-md mx-auto p-4 sm:mt-8 sm:p-8 sm:border sm:rounded-xl sm:bg-white sm:shadow">
             <form
                 onSubmit={e => {
                     e.preventDefault();
