@@ -23,6 +23,7 @@ const Quiz: React.FC = () => {
     };
 
     const next = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         if (idx === questions.length - 1) {
             router.push('/results').then();
             return;
