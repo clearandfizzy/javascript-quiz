@@ -1,6 +1,6 @@
 // src/components/Quiz.tsx
 import React, {useState} from 'react';
-import {questions} from '@/data/local-questions';
+import {questions} from '@/data/questions';
 import {useResults} from '@/context/ResultsProvider';
 import {useRouter} from 'next/router';
 
@@ -24,7 +24,7 @@ const Quiz: React.FC = () => {
 
     const next = () => {
         if (idx === questions.length - 1) {
-            router.push('/results');
+            router.push('/results').then();
             return;
         }
         setAnswered(false);

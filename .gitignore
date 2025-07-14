@@ -1,3 +1,11 @@
 /.idea/
 /.idea/**
 /.idea/**/*
+/.idea
+/.idea/inspectionProfiles/
+/.idea/.gitignore
+/.idea/javascript-quiz.iml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/vcs.xml
+/.idea/workspace.xml

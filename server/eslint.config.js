@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
+import next from 'eslint-config-next'
 
 export default tseslint.config([
   globalIgnores(['dist']),
@@ -14,6 +15,8 @@ export default tseslint.config([
       tseslint.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
+      next,
+      next/core-web-vitals
     ],
     languageOptions: {
       ecmaVersion: 2020,
