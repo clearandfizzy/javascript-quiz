@@ -1,6 +1,6 @@
 // src/components/Quiz.tsx
 import React, {useState} from 'react';
-import {questions} from '../data/questions.ts';
+import {questions} from '../data/local-questions.ts';
 
 const Quiz: React.FC = () => {
     const [idx, setIdx] = useState(0);
