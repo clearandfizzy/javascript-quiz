@@ -3,6 +3,9 @@ import React, {useState, useEffect, useRef} from 'react';
 import {questions} from '@/data/questions';
 import {useResults} from '@/context/ResultsProvider';
 import {useRouter} from 'next/router';
+import ProgressBar from './ProgressBar';
+import TimerDisplay from './TimerDisplay';
+import ResultsList from './ResultsList';
 
 const Quiz: React.FC = () => {
     const [idx, setIdx] = useState(0);
@@ -111,24 +114,17 @@ const Quiz: React.FC = () => {
                                 Next
                             </button>
                         </div>
-                        {timerStarted && secondsElapsed !== null && (
-                            <div className="my-4 p-4 text-left bg-green-200">
-                                Time elapsed: {String(Math.floor((Math.floor(Date.now() / 1000) - secondsElapsed) / 60)).padStart(2, '0')}:{String((Math.floor(Date.now() / 1000) - secondsElapsed) % 60).padStart(2, '0')}
-                            </div>
-                        )}
                         <div className="mt-4">
                             <h3 className="font-bold">Results so far:</h3>
-                            <ul className="list-disc ml-6">
-                                {results.map((r, i) => (
-                                    <li key={i}>
-                                        Question {r.questionIndex + 1}: {r.correct ? "Correct" : "Incorrect"}
-                                    </li>
-                                ))}
-                            </ul>
+                            <ResultsList results={results} />
                         </div>
                     </>
                 )}
             </form>
+            {/* Progress bar */}
+            <ProgressBar current={idx} total={questions.length} />
+            {/* Timer below progress bar */}
+            <TimerDisplay timerStarted={timerStarted} secondsElapsed={secondsElapsed} />
         </div>
     );
 };
