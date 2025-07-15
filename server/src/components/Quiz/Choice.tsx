@@ -22,10 +22,9 @@ export const Choice: React.FC<ChoiceProps> = ({index, selected, answered, choose
             />
             <span
                 className={`inline-block w-full px-4 py-3 rounded-lg border text-base transition
-                                        peer-checked:bg-green-100 peer-checked:border-green-500
-                                        peer-disabled:opacity-60
-                                        bg-white border-gray-300 hover:bg-gray-50
-                                    `}
+                    peer-checked:bg-green-100 peer-checked:border-green-500
+                    peer-disabled:opacity-60
+                    bg-white border-gray-300 hover:bg-gray-50`}
             >{item}</span>
         </label>
     );
