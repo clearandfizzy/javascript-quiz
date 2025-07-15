@@ -19,7 +19,7 @@ const personalLinks = [
 
 const Banner = () => {
     return (
-        <div className="fixed bottom-0 w-full bg-green-100 text-center p-2 shadow-md">
+        <div className="sm:fixed sm:bottom-0 w-full bg-green-100 text-center p-2 shadow-md">
             <p>
                 Technologies:{" "}
                 {links.map((link, index) => (
