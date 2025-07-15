@@ -5,8 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>ClearandFizzy Javscript Quiz</title>
-        <link rel="icon" href="/favicon.ico" />
+
       </Head>
       <body className="antialiased">
         <Main />

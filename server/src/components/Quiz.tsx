@@ -1,6 +1,5 @@
 // src/components/Quiz.tsx
 import React, {useState, useEffect, useRef} from 'react';
-import {questions} from '@/data/questions';
 import {useResults} from '@/context/ResultsProvider';
 import {useRouter} from 'next/router';
 import {Explanation} from "@/components/Quiz/Exaplanation";
@@ -9,8 +8,9 @@ import {NextButton} from "@/components/Quiz/NextButton";
 import {Timer} from "@/components/Quiz/Timer";
 import {ResultsSoFar} from "@/components/Quiz/ResultsSoFar";
 import {Choice} from "@/components/Quiz/Choice";
+import {QuizPropTypes} from "@/types/questionType";
 
-const Quiz: React.FC = () => {
+const Quiz: React.FC<QuizPropTypes> = ({questions}) => {
     const [idx, setIdx] = useState(0);
     const [score, setScore] = useState(0);
     const [answered, setAnswered] = useState(false);
@@ -21,6 +21,9 @@ const Quiz: React.FC = () => {
     const q = questions[idx];
     const {results, setResults} = useResults();
     const router = useRouter();
+
+    if (questions.length < 1)
+        return <div className="text-center text-gray-500">Loading questions...</div>;
 
     useEffect(() => {
         if (timerStarted && secondsElapsed === null) {

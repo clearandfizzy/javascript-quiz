@@ -1,8 +1,9 @@
-import {questions} from "@/data/questions";
 import React from "react";
 import Link from "next/link";
+import {Question} from "@/types/questionType";
 
 type DisplayResultProps = {
+    questions: Question[];
     item: {
         questionId: number;
         correct: boolean;
@@ -11,7 +12,7 @@ type DisplayResultProps = {
 }
 
 
-export const DisplayResult: React.FC<DisplayResultProps> = ({item, index}) => {
+export const DisplayResult: React.FC<DisplayResultProps> = ({questions, item, index}) => {
     const q = questions.filter(q => q.id === item.questionId)[0];
 
     return (

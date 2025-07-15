@@ -1,10 +1,4 @@
-export interface Question {
-    id: number;
-    text: string;
-    choices: string[];
-    correctIndex: number;
-    explanation: string;
-}
+import {Question} from "@/types/questionType";
 
 export const questions: Question[] = [
     {
