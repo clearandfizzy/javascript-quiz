@@ -85,9 +85,9 @@ const Quiz: React.FC<QuizPropTypes> = ({questions}) => {
                 </fieldset>
                 {answered && (
                     <>
+                        <NextButton score={score} next={next} totalQuestions={questions.length}/>
                         <Explanation explanation={q.explanation}/>
                         <LearnMore text={q.text}/>
-                        <NextButton score={score} next={next} totalQuestions={questions.length}/>
                         {timerStarted && secondsElapsed !== null && (
                             <Timer secondsElapsed={secondsElapsed}/>
                         )}
