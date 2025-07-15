@@ -62,7 +62,7 @@ const Banner = () => {
                         </Link>
                         {index < personalLinks.length - 1 && ", "}
                     </span>
-                ))};
+                ))}
             </p>
         </div>
     );
