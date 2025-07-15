@@ -5,6 +5,7 @@ import CryptoJS from "crypto-js";
 import {Result} from "@/types/resultType";
 import {DisplayResult} from "@/components/Results/DisplayResult";
 import {SharableLink} from "@/components/Results/SharableLink";
+import {FinalScore} from "@/components/Results/FinalScore";
 
 const encryptResults = (results: Result[]): string => {
     const str = JSON.stringify(results);
@@ -68,6 +69,7 @@ const ResultsPage: React.FC = () => {
                 >Reset & Start Again
                 </button>
             </div>
+            <FinalScore displayResults={displayResults}/>
         </div>
     );
 };

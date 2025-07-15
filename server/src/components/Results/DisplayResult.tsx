@@ -1,5 +1,6 @@
 import {questions} from "@/data/questions";
 import React from "react";
+import Link from "next/link";
 
 type DisplayResultProps = {
     item: {
@@ -10,12 +11,19 @@ type DisplayResultProps = {
 }
 
 
-export const DisplayResult: React.FC<DisplayResultProps> = ({ item, index }) => {
+export const DisplayResult: React.FC<DisplayResultProps> = ({item, index}) => {
     const q = questions.filter(q => q.id === item.questionId)[0];
 
     return (
         <li key={index} className="p-4 border rounded flex justify-between items-center">
-            <span className="text-sm">{q.text || `Question ${index + 1}`}</span>
+            <span className="text-sm"><Link
+                href={`https://copilot.microsoft.com/?q=${encodeURIComponent(q.text)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+            >
+             {q.text || `Question ${index + 1}`}
+        </Link></span>
             <span
                 className={item.correct ? "text-sm text-green-600 font-bold" : "text-sm text-red-600 font-bold"}>
                             {item.correct ? "Correct" : "Incorrect"}
