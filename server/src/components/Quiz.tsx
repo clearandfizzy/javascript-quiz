@@ -74,8 +74,9 @@ const Quiz: React.FC = () => {
                 <fieldset className="border-0 p-0 m-0">
                     <legend className="text-xl mb-6 font-semibold text-gray-800">{q.text}</legend>
                     <div className="space-y-3">
-                        {q.choices.map((item, i) => (
-                            <Choice i={i} selected={selected} answered={answered} choose={choose} item={item}/>
+                        {q.choices.map((item, index) => (
+                            <Choice key={index} index={index} selected={selected} answered={answered} choose={choose}
+                                    item={item}/>
                         ))}
                     </div>
                 </fieldset>

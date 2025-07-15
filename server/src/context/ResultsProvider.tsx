@@ -1,9 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
-
-interface Result {
-  questionId: number;
-  correct: boolean;
-}
+import {Result} from "@/types/resultType";
 
 interface ResultsContextType {
   results: Result[];

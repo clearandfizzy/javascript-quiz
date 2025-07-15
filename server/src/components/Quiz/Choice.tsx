@@ -1,23 +1,23 @@
 import React from "react";
 
 interface ChoiceProps {
-    i: number;
+    index: number;
     selected: number | undefined;
     answered: boolean;
     choose: (choiceIndex: number) => void;
     item: string;
 }
 
-export const Choice: React.FC<ChoiceProps> = ({ i, selected, answered, choose, item }) => {
+export const Choice: React.FC<ChoiceProps> = ({index, selected, answered, choose, item}) => {
     return (
-        <label key={i} className="block cursor-pointer">
+        <label key={index} className="block cursor-pointer">
             <input
                 type="radio"
                 name="choice"
-                value={i}
-                checked={selected === i}
+                value={index}
+                checked={selected === index}
                 disabled={answered}
-                onChange={() => choose(i)}
+                onChange={() => choose(index)}
                 className="hidden peer"
             />
             <span

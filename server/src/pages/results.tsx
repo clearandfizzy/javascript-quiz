@@ -1,28 +1,30 @@
 import React, {useEffect, useState} from "react";
 import {useResults} from "@/context/ResultsProvider";
-import {questions} from "@/data/local-questions";
 import {useRouter} from "next/router";
 import CryptoJS from "crypto-js";
+import {Result} from "@/types/resultType";
+import {DisplayResult} from "@/components/Results/DisplayResult";
+import {SharableLink} from "@/components/Results/SharableLink";
 
-function encryptResults(results: any) {
+const encryptResults = (results: Result[]): string => {
     const str = JSON.stringify(results);
-    return CryptoJS.AES.encrypt(str, process.env.SECRET_RESULTS_KEY as string).toString();
+    return CryptoJS.AES.encrypt(str, 'sdkfjhdskjhfdskjh').toString();
 }
 
-function decryptResults(hash: string) {
+const decryptResults = (hash: string): Result[] => {
     try {
-        const bytes = CryptoJS.AES.decrypt(hash, process.env.SECRET_RESULTS_KEY as string);
+        const bytes = CryptoJS.AES.decrypt(hash, 'sdkfjhdskjhfdskjh');
         const decrypted = bytes.toString(CryptoJS.enc.Utf8);
-        return JSON.parse(decrypted);
+        return JSON.parse(decrypted) as Result[];
     } catch {
-        return null;
+        return [];
     }
 }
 
 const ResultsPage: React.FC = () => {
     const {results, resetResults} = useResults();
     const router = useRouter();
-    const [sharedResults, setSharedResults] = useState<any[]>([]);
+    const [sharedResults, setSharedResults] = useState<Result[]>([]);
     const [shareUrl, setShareUrl] = useState("");
 
     useEffect(() => {
@@ -53,27 +55,11 @@ const ResultsPage: React.FC = () => {
         <div className="max-w-xl mx-auto mt-10 p-8 bg-white rounded shadow">
             <h1 className="text-2xl font-bold mb-6">Quiz Results</h1>
             {shareUrl && (
-                <div className="mb-6">
-                    <span className="font-semibold">Shareable Link:</span>
-                    <input
-                        type="text"
-                        value={shareUrl}
-                        readOnly
-                        className="w-full mt-2 p-2 border rounded bg-gray-100 text-xs"
-                        onFocus={e => e.target.select()}
-                    />
-                </div>
+                <SharableLink shareUrl={shareUrl}/>
             )}
             <ul className="space-y-4">
-                {displayResults.map((r, i) => (
-                    <li key={i} className="p-4 border rounded flex justify-between items-center">
-                        <span
-                            className="text-sm">{questions[r.questionIndex]?.text || `Question ${r.questionIndex + 1}`}</span>
-                        <span
-                            className={r.correct ? "text-sm text-green-600 font-bold" : "text-sm text-red-600 font-bold"}>
-              {r.correct ? "Correct" : "Incorrect"}
-            </span>
-                    </li>
+                {displayResults.map((item, index) => (
+                    <DisplayResult item={item} index={index}/>
                 ))}
             </ul>
             <div className="mt-8 flex gap-4 item-center justify-center">
