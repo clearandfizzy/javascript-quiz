@@ -53,7 +53,7 @@ const ResultsPage: React.FC = () => {
     const displayResults = sharedResults.length > 0 ? sharedResults : results;
 
     return (
-        <div className="max-w-xl mx-auto mt-10 p-8 bg-white rounded shadow">
+        <div className="max-w-xl mx-auto mt-10 p-8">
             <h1 className="text-2xl font-bold mb-6">Quiz Results</h1>
             {shareUrl && (
                 <SharableLink shareUrl={shareUrl}/>
@@ -70,6 +70,9 @@ const ResultsPage: React.FC = () => {
                 </button>
             </div>
             <FinalScore displayResults={displayResults}/>
+            {shareUrl && (
+                <SharableLink shareUrl={shareUrl}/>
+            )}
         </div>
     );
 };
