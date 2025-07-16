@@ -6,9 +6,10 @@ type LearnMoreProps = {
 }
 
 export const LearnMore = ({text}: LearnMoreProps) => {
+    const context = process.env.NEXT_PUBLIC_QUESTIONS || 'javascript';
     return (<div className="my-2">
         <Link
-            href={`https://copilot.microsoft.com/?q=${encodeURIComponent(text)}`}
+            href={`https://copilot.microsoft.com/?q=${encodeURIComponent(context + ': ' + text)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 underline hover:text-blue-800"
