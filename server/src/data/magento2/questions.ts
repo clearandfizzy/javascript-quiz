@@ -108,7 +108,7 @@ export const questions: Question[] = [
         text: 'To dispatch a custom event, which method is used?',
         choices: [
             'EventManager::run()',
-            'Magento\Framework\Event\ManagerInterface::dispatch()',
+            'Magento\\Framework\\Event\\ManagerInterface::dispatch()',
             'Observer::execute()',
             'Plugin::aroundMethod()'
         ],
@@ -141,10 +141,10 @@ export const questions: Question[] = [
         id: 9,
         text: 'Controller actions must implement which interface?',
         choices: [
-            'Magento\Framework\App\Action\ActionInterface',
-            'Magento\Framework\App\Action\HttpGetActionInterface',
-            'Magento\Framework\Controller\ResultInterface',
-            'Magento\Framework\App\RequestInterface'
+            'Magento\\Framework\\App\\Action\\ActionInterface',
+            'Magento\\Framework\\App\\Action\\HttpGetActionInterface',
+            'Magento\\Framework\\Controller\\ResultInterface',
+            'Magento\\Framework\\App\\RequestInterface'
         ],
         correctIndex: 1,
         explanation: `
@@ -158,16 +158,16 @@ export const questions: Question[] = [
         id: 10,
         text: 'Which class is the base for block templates?',
         choices: [
-            'Magento\Framework\View\Element\Template',
-            'Magento\Framework\Model\AbstractModel',
-            'Magento\Framework\App\Action\Action',
-            'Magento\Framework\View\Element\Html\Link'
+            'Magento\\Framework\\View\\Element\\Template',
+            'Magento\\Framework\\Model\\AbstractModel',
+            'Magento\\Framework\\App\\Action\\Action',
+            'Magento\\Framework\\View\\Element\\Html\\Link'
         ],
         correctIndex: 0,
         explanation: `
       <ul>
         <li><strong>Template</strong>: base block for phtml templates.</li>
-        <li>Link extends Html\Link for anchor rendering.</li>
+        <li>Link extends Html\\Link for anchor rendering.</li>
       </ul>
     `
     },
@@ -413,16 +413,16 @@ export const questions: Question[] = [
         id: 25,
         text: 'Which interface is used for logging?',
         choices: [
-            'Psr\Log\LoggerInterface',
-            'Magento\Framework\Logger\LoggerInterface',
-            'Magento\Framework\App\LoggerInterface',
-            'Psr\Log\LogInterface'
+            'Psr\\Log\\LoggerInterface',
+            'Magento\\Framework\\Logger\\LoggerInterface',
+            'Magento\\Framework\\App\\LoggerInterface',
+            'Psr\\Log\\LogInterface'
         ],
         correctIndex: 0,
         explanation: `
       <ul>
-        <li><strong>Psr\Log\LoggerInterface</strong>: standard logging API.</li>
-        <li>Magento\Framework logger implements PSR interface.</li>
+        <li><strong>Psr\\Log\\LoggerInterface</strong>: standard logging API.</li>
+        <li>Magento\\Framework logger implements PSR interface.</li>
       </ul>
     `
     },
@@ -430,7 +430,7 @@ export const questions: Question[] = [
         id: 26,
         text: 'To create a custom log file, configure which DI type?',
         choices: [
-            '<type name="Psr\Log\LoggerInterface">',
+            '<type name="Psr\\Log\\LoggerInterface">',
             '<virtualType name="CustomLogger">',
             '<logger name="custom">',
             '<argument name="file" xsi:type="string">'
@@ -438,7 +438,7 @@ export const questions: Question[] = [
         correctIndex: 0,
         explanation: `
       <ul>
-        <li><strong>type name="Psr\Log\LoggerInterface"</strong>: preference for custom logger.</li>
+        <li><strong>type name="Psr\\Log\\LoggerInterface"</strong>: preference for custom logger.</li>
         <li>virtualType defines new class but not preference.</li>
       </ul>
     `
@@ -702,15 +702,15 @@ export const questions: Question[] = [
         id: 42,
         text: 'Which class provides customer session data?',
         choices: [
-            'Magento\Customer\Model\Session',
-            'Magento\Customer\Api\AccountManagementInterface',
-            'Magento\Framework\Session\SessionManager',
-            'Magento\Customer\Api\SessionInterface'
+            'Magento\\Customer\\Model\\Session',
+            'Magento\\Customer\\Api\\AccountManagementInterface',
+            'Magento\\Framework\\Session\\SessionManager',
+            'Magento\\Customer\\Api\\SessionInterface'
         ],
         correctIndex: 0,
         explanation: `
       <ul>
-        <li><strong>Model\Session</strong>: handles customer session storage.</li>
+        <li><strong>Model\\Session</strong>: handles customer session storage.</li>
         <li>SessionManager is generic session handler.</li>
       </ul>
     `
@@ -753,15 +753,15 @@ export const questions: Question[] = [
         id: 45,
         text: 'Which class handles HTTP requests in Magento?',
         choices: [
-            'Magento\Framework\App\Request\Http',
-            'Magento\Framework\App\Action\HttpGetActionInterface',
-            'Magento\Framework\Controller\RequestInterface',
-            'Magento\Framework\App\RequestInterface'
+            'Magento\\Framework\\App\\Request\\Http',
+            'Magento\\Framework\\App\\Action\\HttpGetActionInterface',
+            'Magento\\Framework\\Controller\\RequestInterface',
+            'Magento\\Framework\\App\\RequestInterface'
         ],
         correctIndex: 0,
         explanation: `
       <ul>
-        <li><strong>Request\Http</strong>: concrete HTTP request implementation.</li>
+        <li><strong>Request\\Http</strong>: concrete HTTP request implementation.</li>
         <li>Action interfaces define controller actions.</li>
       </ul>
     `
