@@ -1,4 +1,4 @@
-import {Question} from "@/types/questionType";
+import {Question} from "@/types/QuestionType";
 
 export const questions: Question[] = [
     // State Management (5)
@@ -109,7 +109,7 @@ export const questions: Question[] = [
     },
     {
         id: 9,
-        text: 'Which pattern prevents state updates on unmounted components in async effects?',
+        text: 'Which pattern prevents state updates on unmounted components in async lib?',
         choices: [
             'AbortController',
             'let mounted = true; if (mounted) setState()',
