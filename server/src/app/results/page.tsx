@@ -2,7 +2,7 @@
 
 import React from "react";
 import {getByKey} from "@/datasource/questions/QuestionRepository";
-import Results from "@/components/results/Results";
+import ResultsList from "@/components/results/ResultsList";
 
 type ResultsPageProps = {
 	params: { key?: string }
@@ -15,7 +15,7 @@ const ResultsPage = async ({params}: ResultsPageProps) => {
 	return (<>
 		<div
 			className="quiz-container max-w-md mx-auto p-4 sm:mt-8 sm:p-8 sm:border sm:rounded-xl sm:bg-white sm:shadow">
-			<Results questions={questions}/>
+			<ResultsList questions={questions}/>
 		</div>
 	</>);
 }
