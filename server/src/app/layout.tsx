@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/globals.css';
+import '../styles/globals.css';
 import {QuestionsProvider} from "@/components/context/QuestionProvider";
 import {ResultsProvider} from "@/components/context/ResultsProvider";
 
@@ -11,9 +11,9 @@ export default function Layout({children}: { children: React.ReactNode }) {
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<title>Quizzical App</title>
 		</head>
-		<body>
-		<div className="min-h-screen bg-gray-50 text-gray-900">
-			<header className="w-full py-4 bg-purple-500 text-white text-center font-bold text-xl shadow">
+		<body className={'bg-[var(--color-bg)] text-[var(--color-text)]'}>
+		<div className="min-h-screen">
+			<header className="py-4 bg-[var(--color-header)] text-white text-center font-bold text-xl shadow">
 				Quizzical
 			</header>
 			<main className="max-w-2xl mx-auto p-4">
@@ -23,7 +23,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
 					</QuestionsProvider>
 				</ResultsProvider>
 			</main>
-			<footer className="w-full py-2 text-center text-xs text-gray-500 mt-8">
+			<footer className="py-2 text-center text-xs mt-8">
 				&copy; {new Date().getFullYear()} Quizzical App. All rights reserved.
 			</footer>
 		</div>

@@ -14,7 +14,7 @@ export const TableBody = () => {
 		return (
 			<tbody>
 			<tr>
-				<td colSpan={2} className="px-4 py-2 text-center text-gray-500">
+				<td colSpan={2} className="px-4 py-2 text-center text-[var(--color-header)]">
 					No data available.
 				</td>
 			</tr>
@@ -29,14 +29,14 @@ export const TableBody = () => {
 
 	return (<tbody>{
 		dataConfig.map((item) => (
-			<tr key={item.key} className="bg-white hover:bg-gray-50 transition-colors">
+			<tr key={item.key} className="">
 				<td className="text-left px-4 py-2">
 					<button
 						onClick={() => handleQuestionClick(item.key)}
-						className="hover:cursor-pointer text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium"
+						className="hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)]"
 					>{item.label}</button>
 				</td>
-				<td className="px-4 py-2 text-gray-700">
+				<td className="px-4 py-2">
 					{item.description || "No description available."}
 				</td>
 			</tr>

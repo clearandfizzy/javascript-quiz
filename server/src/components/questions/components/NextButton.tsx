@@ -18,7 +18,7 @@ export const NextButton: React.FC<NextButtonProps> = ({lastQuestionIndex}) => {
 			>
 				Next
 			</button>
-			<div className="mt-4 flex justify-between items-center text-base text-gray-800">
+			<div className="mt-4 flex justify-between items-center text-base text-[var(--color-header)]">
             <span className="font-semibold">
                 Score: {score} / {lastQuestionIndex + 1}
             </span>

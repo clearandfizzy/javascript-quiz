@@ -9,8 +9,13 @@ export const config = {
 			fontFamily: {
 				sans: ["Roboto", "ui-sans-serif", "system-ui"],
 			},
+			colors: {
+				header: 'var(--color-header)',
+				button: 'var(--color-button)',
+				text: 'var(--color-text)',
+				bg: 'var(--color-bg)',
+			}
 		},
 	},
 	plugins: [],
 };
-

@@ -6,9 +6,8 @@ type FinalScoreProps = {
 
 export const FinalScore: React.FC<FinalScoreProps> = ({displayResults}) => {
     return (
-        <div className="test-score">
-            <h2>Your Test Score</h2>
-            <p>{displayResults.reduce((total, result) => total + parseInt(result.correct ? "1" : "0"), 0)} / {displayResults.length}</p>
+        <div className="test-score mt-4">
+            <p>Your Test Score: {displayResults.reduce((total, result) => total + parseInt(result.correct ? "1" : "0"), 0)} / {displayResults.length}</p>
         </div>
     );
 }

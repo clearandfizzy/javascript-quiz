@@ -3,12 +3,12 @@
 import React from "react";
 import {QuizPropTypes} from "@/types/QuestionType";
 import {useResults} from "@/components/context/ResultsProvider";
-import {DisplayResult} from "@/components/results/DisplayResult";
-import {SharableLink} from "@/components/results/SharableLink";
-import {FinalScore} from "@/components/results/FinalScore";
+import {DisplayResult} from "@/components/results/components/DisplayResult";
+import {SharableLink} from "@/components/results/components/SharableLink";
+import {FinalScore} from "@/components/results/components/FinalScore";
 import {useDecryptResults} from "@/components/results/lib/useDecryptResults";
 import {useEncryptResults} from "@/components/results/lib/useEncryptResults";
-import {RestartAndStartAgain} from "@/components/results/RestartAndStartAgain";
+import {RestartAndStartAgain} from "@/components/results/components/RestartAndStartAgain";
 
 const ResultsList: React.FC<QuizPropTypes> = ({questions}) => {
 	const {results, sharedResults} = useResults();
@@ -31,10 +31,8 @@ const ResultsList: React.FC<QuizPropTypes> = ({questions}) => {
 						index={index}/>
 				))}
 			</ul>
-			<div className="my-8 flex gap-4 item-center justify-center">
-				<RestartAndStartAgain/>
-			</div>
 			<FinalScore displayResults={displayResults}/>
+			<RestartAndStartAgain/>
 			<SharableLink/>
 		</div>
 	);

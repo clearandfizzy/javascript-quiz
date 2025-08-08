@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-header: #2C3E50;
+    --color-button: #1ABC9C;
+    --color-text: #34495E;
+    --color-bg: #ECF0F1;
+}
+
+:root {
+    --color-header: #607D8B; /* Cool Gray (lighter, modern header) */
+    --color-button: var(--color-green-600); /* Electric Blue (primary CTA buttons) */
+    --color-button-hover: var(--color-green-700);; /* Darker Electric Blue for hover */
+    --color-text: #222831; /* Off-black (main body text) */
+    --color-bg: #F9FAFB; /* Soft White (page background) */
+    --color-accent: #FF6F61; /* Coral (highlights, promotions) */
+    --color-accent-lime: #A3D900; /* Lime Green (alternative accents) */
+    --color-accent-amber: #FFC107; /* Bright Amber (alerts, urgency) */
+    --color-link: #FF6F61;
+}
