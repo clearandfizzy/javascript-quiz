@@ -1,11 +1,11 @@
 import {getStore} from "@netlify/blobs";
 import {questions as javascript} from "../javascript/questions";
-import {questions as tailwind} from "../javascript/questions";
-import {questions as react} from "../javascript/questions";
-import {questions as magento2} from "../javascript/questions";
+import {questions as tailwind} from "../tailwind/questions";
+import {questions as react} from "../react/questions";
+import {questions as magento2} from "../magento2/questions";
 
 export default async () => {
-	const store = getStore("questions");
+	const store = getStore("file-uploads");
 
 	const data = [
 		{
@@ -26,8 +26,8 @@ export default async () => {
 		}
 	];
 
-	data.forEach((item) => {
-		store.set(`${item.key}.json`, JSON.stringify(item.data));
+	data.map(async (item) => {
+		await store.set(`${item.key}.json`, JSON.stringify(item.data));
 	})
 
 	return new Response("File saved to blob storage after deploy.");
