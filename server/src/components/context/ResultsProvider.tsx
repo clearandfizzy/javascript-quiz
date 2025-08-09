@@ -20,14 +20,18 @@ export const ResultsProvider = ({children}: { children: ReactNode }) => {
 	const [sharedResults, setSharedResults] = useState<Result[]>([]);
 	const [shareUrl, setShareUrl] = useState<string>("");
 
-	const resetResults = () => setResults([]);
+	const resetResults = () => {
+		setResults([]);
+		setSharedResults([]);
+		setShareUrl("");
+	};
 
 	return (
 		<ResultsContext.Provider value={{
 			results, setResults,
-			resetResults,
 			sharedResults, setSharedResults,
-			shareUrl, setShareUrl
+			shareUrl, setShareUrl,
+			resetResults,
 		}}>
 			{children}
 		</ResultsContext.Provider>

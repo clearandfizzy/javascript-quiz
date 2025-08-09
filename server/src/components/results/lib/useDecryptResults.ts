@@ -1,14 +1,14 @@
 'use client';
 
 import {useEffect} from "react";
-import {Result} from "@/types/ResultType";
 import CryptoJS from "crypto-js";
+import {Result} from "@/types/ResultType";
 import {useSearchParams} from "next/navigation";
 import {useResults} from "@/components/context/ResultsProvider";
 
 export const useDecryptResults = () => {
 	const searchParams = useSearchParams();
-	const {	setSharedResults } = useResults();
+	const {sharedResults, setSharedResults} = useResults();
 	const hash = searchParams.get("hash");
 
 	const decryptResults = (hash: string): Result[] => {
@@ -22,6 +22,8 @@ export const useDecryptResults = () => {
 	}
 
 	useEffect(() => {
+		if (sharedResults.length > 0)
+			return;
 		if (hash) {
 			const decrypted = decryptResults(hash);
 			if (decrypted) setSharedResults(decrypted);
@@ -30,6 +32,6 @@ export const useDecryptResults = () => {
 		}
 	}, [hash]);
 
-	return { decryptResults };
+	return {decryptResults};
 
 }

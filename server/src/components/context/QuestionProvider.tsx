@@ -20,6 +20,7 @@ export interface QuestionContextType {
 	setTimerStarted: (started: boolean) => void;
 	setSecondsElapsed: (seconds: number | null) => void;
 	setCurrentQuestion: (question: Question | undefined) => void;
+	resetQuestions: () => void;
 }
 
 const QuestionsContext = createContext<QuestionContextType | undefined>(undefined);
@@ -34,6 +35,16 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 	const [timerStarted, setTimerStarted] = useState(false);
 	const [secondsElapsed, setSecondsElapsed] = useState<number | null>(null);
 
+	const resetQuestions = () => {
+		setCurrentQuestion(undefined);
+		setIdx(0);
+		setScore(0);
+		setAnswered(false);
+		setSelected(undefined);
+		setTimerStarted(false);
+		setSecondsElapsed(null);
+	}
+
 	return (
 		<QuestionsContext.Provider value={{
 			questionKey, setQuestionKey,
@@ -43,7 +54,8 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 			answered, setAnswered,
 			selected, setSelected,
 			timerStarted, setTimerStarted,
-			secondsElapsed, setSecondsElapsed
+			secondsElapsed, setSecondsElapsed,
+			resetQuestions
 		}}>
 			{children}
 		</QuestionsContext.Provider>

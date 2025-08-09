@@ -23,8 +23,9 @@ export const TableBody = () => {
 	}
 
 	const handleQuestionClick = (key: string) => {
+		console.log('handleQuestionClick', key);
 		setQuestionKey(key);
-		router.push(`${urlConfig.endPoints.questions}`);
+		router.push(`${urlConfig.endPoints.questions}/${key}`);
 	}
 
 	return (<tbody>{

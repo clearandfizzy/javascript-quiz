@@ -8,6 +8,8 @@ import {useTimer} from "@/components/questions/lib/useTimer";
 import {useInterval} from "@/components/questions/lib/useInterval";
 import {useOnSubmit} from "@/components/questions/lib/useOnSubmit";
 import {useQuestionIndex} from "@/components/questions/lib/useQuestionIndex";
+import useResetResults from "@/components/questions/lib/useResetResults";
+import useResetQuestions from "@/components/questions/lib/useResetQuestions";
 
 type QuestionFormProps = {
 	questions: Question[];
@@ -26,6 +28,8 @@ export const QuestionForm = (props: QuestionFormProps) => {
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 	const lastQuestionIndex = questions.length - 1;
 
+	useResetQuestions();
+	useResetResults();
 	useQuestionIndex(questions[idx]);
 	useTimer();
 	useInterval({props: {lastQuestionIndex, idx, intervalRef}});
@@ -47,9 +51,9 @@ export const QuestionForm = (props: QuestionFormProps) => {
 		</fieldset>
 		{answered && (
 			<>
-				<QuizComponents.NextButton lastQuestionIndex={lastQuestionIndex}/>
 				<QuizComponents.Explanation/>
 				<QuizComponents.LearnMore/>
+				<QuizComponents.NextButton lastQuestionIndex={lastQuestionIndex}/>
 				<QuizComponents.Timer/>
 				<QuizComponents.ResultsSoFar/>
 			</>

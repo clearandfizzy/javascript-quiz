@@ -1,5 +1,6 @@
 export const urlConfig = {
 	endPoints: {
-		questions: '/questions'
+		questions: '/questions',
+		results: '/results/[id]',
 	}
 }

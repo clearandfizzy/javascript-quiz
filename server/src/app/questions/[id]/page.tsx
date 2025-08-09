@@ -1,16 +1,23 @@
-'use server';
-
+"use server";
 import React from "react";
 import {QuestionForm} from "@/components/questions/QuestionForm";
 import {getByKey} from "@/datasource/questions/QuestionRepository";
+import {Question} from "@/types/QuestionType";
 
 type QuestionsPageProps = {
-	params: { key?: string }
-};
+	params: Promise<any>
+}
 
-const QuestionsPage = async ({ params }: QuestionsPageProps) => {
-	const key = params?.key || 'javascript';
-	const questions = await getByKey(key);
+const QuestionsPage = async ({params}: QuestionsPageProps) => {
+	const [p] = await Promise.all([params]);
+	const id = p.id as string;
+	let questions: Question[] = [];
+
+	try {
+		questions = await getByKey(id);
+	} catch (error) {
+		console.error("Error fetching questions:", error);
+	}
 
 	return (<>
 		<div

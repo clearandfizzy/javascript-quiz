@@ -30,7 +30,16 @@ export const useHandleChoice = () => {
 		const correct = answerIndex === currentQuestion!.correctIndex;
 		if (correct) setScore(score + 1);
 
-		setResults([...results, {questionId: currentQuestion!.id, correct}]);
+		setResults([
+			...results,
+			{
+				questionId: currentQuestion!.id,
+				correct,
+				question: {
+					text: currentQuestion!.text,
+				}
+			},
+		]);
 	};
 
 	return {handleChoice};

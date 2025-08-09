@@ -1,32 +1,33 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
-import {Question} from "@/types/QuestionType";
+import {useResults} from "@/components/context/ResultsProvider";
+import {useDecryptResults} from "@/components/results/lib/useDecryptResults";
+import {CopilotLink} from "@/components/results/components/displayresults/CopilotLink";
 
-type DisplayResultProps = {
-    question: Question;
-    item: {
-        questionId: number;
-        correct: boolean;
-    };
-    index: number;
-}
+export const DisplayResult: React.FC = () => {
+	const {results, sharedResults} = useResults();
 
-export const DisplayResult: React.FC<DisplayResultProps> = ({question, item, index}) => {
-    return (
-        <li key={index} className="p-4 border rounded flex justify-between items-center">
-            <span className="text-sm"><Link
-                href={`https://copilot.microsoft.com/?q=${encodeURIComponent(question.text)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline hover:text-blue-800"
-            >
-             {question.text || `Question ${index + 1}`}
-        </Link></span>
-            <span
-                className={item.correct ? "text-sm text-green-600 font-bold" : "text-sm text-red-600 font-bold"}>
-                            {item.correct ? "Correct" : "Incorrect"}
-                        </span>
-        </li>
-    );
+	useDecryptResults();
+
+	if (sharedResults.length < 1 && results.length < 1) {
+		return <></>
+	}
+
+	const displayResults = sharedResults.length > 0 ? sharedResults : results;
+
+	return (
+		<ul className="space-y-4">
+			{displayResults.map((item, index) => (
+				<li key={index} className="p-4 border rounded flex justify-between items-center">
+					<span className="text-sm"><CopilotLink item={item} index={index}/></span>
+					{item.correct
+						? <span className="text-sm text-green-600 font-bold">Correct</span>
+						: <span className="text-sm text-red-600 font-bold">Incorrect</span>
+					}
+				</li>
+			))}
+		</ul>
+	);
 };
 
