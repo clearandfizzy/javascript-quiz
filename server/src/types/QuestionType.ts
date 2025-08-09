@@ -5,7 +5,3 @@ export interface Question {
     correctIndex: number;
     explanation: string;
 }
-
-export type QuizPropTypes = {
-    questions: Question[];
-}
