@@ -1,34 +1,8 @@
 import {getStore} from "@netlify/blobs";
-import {questions as javascript} from "../javascript/questions";
-import {questions as tailwind} from "../tailwind/questions";
-import {questions as react} from "../react/questions";
-import {questions as magento2} from "../magento2/questions";
 
 export default async () => {
-	const store = getStore("file-uploads");
+	const store = getStore("questions");
 
-	const data = [
-		{
-			key: 'javascript',
-			data: javascript,
-		},
-		{
-			key: 'tailwind',
-			data: tailwind,
-		},
-		{
-			key: 'react',
-			data: react,
-		},
-		{
-			key: 'magento2',
-			data: magento2,
-		}
-	];
-
-	data.map(async (item) => {
-		await store.set(`${item.key}.json`, JSON.stringify(item.data));
-	})
-
+	await store.set("test.txt", "Hello from post-deploy!");
 	return new Response("File saved to blob storage after deploy.");
 };
