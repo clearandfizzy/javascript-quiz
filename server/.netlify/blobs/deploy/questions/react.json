@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "text": "Which React hook allows complex state logic management similar to Redux patterns?",
+    "choices": [
+      "useState",
+      "useReducer",
+      "useContext",
+      "useMemo"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>useReducer</strong>: manages complex state logic via reducer functions.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 2,
+    "text": "To share state across deeply nested components without prop drilling, which should you use?",
+    "choices": [
+      "useState",
+      "useReducer",
+      "Context API",
+      "useCallback"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Context API</strong>: provides global-like state to any descendant component.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 3,
+    "text": "Which browser API can you use to sync state across multiple tabs?",
+    "choices": [
+      "sessionStorage",
+      "localStorage",
+      "BroadcastChannel",
+      "IndexedDB"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>BroadcastChannel</strong>: enables messaging between tabs of the same origin.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 4,
+    "text": "When state updates depend on the previous state value, which hook signature is preferred?",
+    "choices": [
+      "setCount(count + 1)",
+      "setCount(prev => prev + 1)",
+      "useEffect(() => {}, [])",
+      "useMemo(() => count + 1, [count])"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>setCount(prev => prev + 1)</strong>: safely updates based on prior state.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 5,
+    "text": "Which hook would you pair with Context to read context value in a component?",
+    "choices": [
+      "useContext",
+      "useRef",
+      "useState",
+      "useLayoutEffect"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>useContext</strong>: accesses the nearest matching Context value.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 6,
+    "text": "To avoid stale closures, where should all dependencies of an effect be declared?",
+    "choices": [
+      "Inside the effect body",
+      "In the deps array",
+      "In useState",
+      "In useRef"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>In the deps array</strong>: React re-runs effect when any dep changes.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 7,
+    "text": "Which cleanup function pattern correctly clears a timer?",
+    "choices": [
+      "return () => clearTimeout(id)",
+      "clearTimeout(id)",
+      "useCleanup(clearTimeout)",
+      "return clearTimeout(id)"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>return () => clearTimeout(id)</strong>: unregisters timer on unmount or deps change.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 8,
+    "text": "To fetch data on mount only, how should you write useEffect?",
+    "choices": [
+      "useEffect(fetchData)",
+      "useEffect(fetchData, [])",
+      "useEffect(() => { fetchData(); }, [])",
+      "useEffect(() => fetchData())"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>useEffect(() => { fetchData(); }, [])</strong>: runs once after first render.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 9,
+    "text": "Which pattern prevents state updates on unmounted components in async lib?",
+    "choices": [
+      "AbortController",
+      "let mounted = true; if (mounted) setState()",
+      "try/catch",
+      "useLayoutEffect"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>let mounted = true; … if (mounted) setState()</strong>: checks before updating.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 10,
+    "text": "To add and remove an event listener in effect, what is needed?",
+    "choices": [
+      "Add in effect, remove in return cleanup",
+      "Add in cleanup, remove outside",
+      "Add in component body",
+      "No cleanup needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Add in effect, remove in return cleanup</strong>: avoids leaks on unmount.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 11,
+    "text": "Which HOC prevents re-rendering when props haven’t changed?",
+    "choices": [
+      "React.lazy",
+      "React.memo",
+      "useMemo",
+      "useCallback"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>React.memo</strong>: shallowly compares props to skip updates.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 12,
+    "text": "To memoize a callback function between renders, use:",
+    "choices": [
+      "useState",
+      "useMemo",
+      "useCallback",
+      "useRef"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>useCallback</strong>: returns a memoized version of callback.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 13,
+    "text": "Which technique defers loading components until needed?",
+    "choices": [
+      "useReducer",
+      "lazy loading",
+      "Context",
+      "debouncing"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>lazy loading</strong>: splits code and loads on demand.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 14,
+    "text": "To limit how often a fast-firing event handler runs, apply:",
+    "choices": [
+      "throttling",
+      "debouncing",
+      "memoization",
+      "SSR"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>debouncing</strong>: delays invocation until events pause.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 15,
+    "text": "Rendering only visible list items uses:",
+    "choices": [
+      "virtualization",
+      "pagination",
+      "filtering",
+      "hydration"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>virtualization</strong>: renders viewport subset for performance.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 16,
+    "text": "Controlled form inputs in React mean value is tied to:",
+    "choices": [
+      "DOM only",
+      "component state",
+      "localStorage",
+      "Context"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>component state</strong>: input value comes from state and onChange.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 17,
+    "text": "Which library simplifies form state and validation?",
+    "choices": [
+      "Formik",
+      "react-hook-form",
+      "Redux",
+      "Axios"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>react-hook-form</strong>: lightweight, performant form handling.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 18,
+    "text": "Dynamic fields in forms can cause issues when:",
+    "choices": [
+      "keys change unexpectedly",
+      "using controlled inputs",
+      "using useEffect",
+      "no cleanups"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>keys change unexpectedly</strong>: remounts inputs losing their state.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 19,
+    "text": "To handle async validation on submit, you should:",
+    "choices": [
+      "setTimeout in onSubmit",
+      "use async/await inside handler",
+      "use useLayoutEffect",
+      "useContext"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>use async/await inside handler</strong>: waits for validation promise.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 20,
+    "text": "Uncontrolled inputs rely on:",
+    "choices": [
+      "refs",
+      "state",
+      "Context",
+      "reducers"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>refs</strong>: read values directly from DOM elements.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 21,
+    "text": "Which component catches rendering errors in its subtree?",
+    "choices": [
+      "ErrorBoundary",
+      "Suspense",
+      "Profiler",
+      "Fragment"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>ErrorBoundary</strong>: implements componentDidCatch to show fallback UI.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 22,
+    "text": "To catch rejected promises in an async effect, you should:",
+    "choices": [
+      "add .catch on promise",
+      "wrap in try/catch inside useEffect",
+      "use ErrorBoundary",
+      "useMemo"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>wrap in try/catch inside useEffect</strong>: handles async errors in effects.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 23,
+    "text": "For showing a fallback while lazy-loading, use:",
+    "choices": [
+      "ErrorBoundary",
+      "Suspense",
+      "fallbackUI",
+      "Profiler"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Suspense</strong>: accepts a fallback prop during code-split loads.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 24,
+    "text": "You should avoid uncaught errors by always:",
+    "choices": [
+      "using error boundaries",
+      "ignoring promise rejections",
+      "never using async",
+      "disabling strict mode"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>using error boundaries</strong>: prevents the entire app from crashing.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 25,
+    "text": "To report errors to an external service, integrate in:",
+    "choices": [
+      "ErrorBoundary",
+      "Profiler",
+      "useEffect",
+      "Context"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>ErrorBoundary</strong>: call service in componentDidCatch.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 26,
+    "text": "Before accessing window.localStorage in SSR, you should:",
+    "choices": [
+      "check typeof window !== \"undefined\"",
+      "wrap in try/catch",
+      "use useEffect",
+      "no check needed"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>check typeof window !== \"undefined\"</strong>: ensures code runs only client-side.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 27,
+    "text": "Hydration mismatch errors often arise from:",
+    "choices": [
+      "different server vs client markup",
+      "missing dependencies",
+      "unclosed tags",
+      "wrong state"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>different server vs client markup</strong>: ensure deterministic render output.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 28,
+    "text": "In Safari private mode, localStorage may:",
+    "choices": [
+      "throw QuotaExceededError",
+      "work normally",
+      "be null",
+      "auto-clear"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>throw QuotaExceededError</strong>: handle exceptions when writing.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 29,
+    "text": "To avoid syncing in SSR, wrap event listeners in:",
+    "choices": [
+      "useEffect",
+      "useLayoutEffect",
+      "useMemo",
+      "useCallback"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>useEffect</strong>: runs only on the client after mount.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 30,
+    "text": "BroadcastChannel should be used inside:",
+    "choices": [
+      "component body",
+      "useEffect",
+      "render",
+      "useMemo"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>useEffect</strong>: to set up and clean up channel listeners client-side.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 31,
+    "text": "To prevent XSS when rendering user HTML, you should:",
+    "choices": [
+      "use dangerouslySetInnerHTML",
+      "sanitize input first",
+      "escape backticks",
+      "encode URLs"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>sanitize input first</strong>: remove malicious scripts before rendering.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 32,
+    "text": "Storing JWT tokens in localStorage can risk:",
+    "choices": [
+      "CSRF",
+      "XSS-based token theft",
+      "race conditions",
+      "SSR errors"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>XSS-based token theft</strong>: scripts can read localStorage.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 33,
+    "text": "A more secure alternative to localStorage for auth tokens is:",
+    "choices": [
+      "sessionStorage",
+      "httpOnly cookies",
+      "IndexedDB",
+      "Context"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>httpOnly cookies</strong>: not accessible to JavaScript.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 34,
+    "text": "To avoid exposing API keys in client bundle, use:",
+    "choices": [
+      "env vars in frontend",
+      "server-side proxy",
+      "inline scripts",
+      "local JSON file"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>server-side proxy</strong>: keeps secrets on the server.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 35,
+    "text": "When fetching over HTTPS, ensure you also:",
+    "choices": [
+      "disable CORS",
+      "serve cookies secure flag",
+      "use POST only",
+      "minify JS"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>serve cookies secure flag</strong>: sends cookies only over HTTPS.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 36,
+    "text": "Which library helps manage server state and caching?",
+    "choices": [
+      "Redux",
+      "React Query",
+      "Axios",
+      "mobx"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>React Query</strong>: handles fetching, caching, and updates automatically.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 37,
+    "text": "To avoid race conditions when refetching, you should:",
+    "choices": [
+      "cancel previous requests",
+      "use useMemo",
+      "batch setState",
+      "useContext"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>cancel previous requests</strong>: prevents outdated data overwrites.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 38,
+    "text": "SWR’s stale-while-revalidate strategy means:",
+    "choices": [
+      "show cached data then update",
+      "never revalidate",
+      "always fetch twice",
+      "batch requests"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>show cached data then update</strong>: UI is fast and stays fresh.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 39,
+    "text": "Preventing “zombie” requests in React Query uses:",
+    "choices": [
+      "refetchOnWindowFocus",
+      "keepPreviousData",
+      "queryFn",
+      "mutationKey"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>keepPreviousData</strong>: retains old data until new arrives.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 40,
+    "text": "For paginated data, which React Query feature is helpful?",
+    "choices": [
+      "infinite queries",
+      "parallel queries",
+      "select option",
+      "mutation cache"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>infinite queries</strong>: fetches pages as the user scrolls.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 41,
+    "text": "A good component responsibility is to:",
+    "choices": [
+      "handle both UI and data logic",
+      "be as large as possible",
+      "be focused and reusable",
+      "avoid props"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>be focused and reusable</strong>: single responsibility for clarity.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 42,
+    "text": "Separating UI and logic often uses:",
+    "choices": [
+      "custom hooks",
+      "HOCs",
+      "inline styles",
+      "Context"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>custom hooks</strong>: encapsulate logic, keeping components clean.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 43,
+    "text": "To avoid prop drilling, you might:",
+    "choices": [
+      "useContext",
+      "pass props manually",
+      "duplicate state",
+      "useMemo"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>useContext</strong>: provides data without passing through every level.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 44,
+    "text": "A “dumb” component is one that:",
+    "choices": [
+      "uses Redux",
+      "contains no hooks",
+      "only renders UI from props",
+      "has local state"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>only renders UI from props</strong>: has no side effects or logic.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 45,
+    "text": "Compound components pattern improves:",
+    "choices": [
+      "bundle size",
+      "logic reuse",
+      "API ergonomics",
+      "testing complexity"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>API ergonomics</strong>: offers flexible composition for users.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 46,
+    "text": "To ensure a prop is one of a set of strings, use:",
+    "choices": [
+      "any",
+      "string",
+      "enum",
+      "unknown"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>enum</strong>: defines a set of named constants.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 47,
+    "text": "Avoiding the any type helps with:",
+    "choices": [
+      "bundling speed",
+      "type safety",
+      "JSX parsing",
+      "runtime performance"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>type safety</strong>: ensures compile-time checks catch errors.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 48,
+    "text": "To type a component that accepts children, use:",
+    "choices": [
+      "React.FC<Props>",
+      "any",
+      "Function",
+      "JSX.Element"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>React.FC<Props></strong>: includes the children prop by default.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 49,
+    "text": "Null-safety in TS can be enforced by:",
+    "choices": [
+      "strictNullChecks",
+      "noImplicitAny",
+      "skipLibCheck",
+      "jsxImportSource"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>strictNullChecks</strong>: flags potential null/undefined misuse.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 50,
+    "text": "A discriminated union uses:",
+    "choices": [
+      "common literal prop",
+      "generic any",
+      "indexed types",
+      "namespace imports"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>common literal prop</strong>: differentiates variants in a union type.</li>\n      </ul>\n    "
+  }
+]

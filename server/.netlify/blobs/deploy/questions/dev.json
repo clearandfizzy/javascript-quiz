@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "text": "What is the output of typeof null in JavaScript?",
+    "choices": [
+      "null",
+      "object",
+      "undefined",
+      "boolean"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n<ul>\n  <li><strong>object</strong>: JS quirk—typeof null reports \"object\".</li>\n</ul>\n"
+  },
+  {
+    "id": 2,
+    "text": "Which array method adds one or more elements to the end?",
+    "choices": [
+      "pop",
+      "push",
+      "shift",
+      "unshift"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n<ul>\n  <li><strong>push</strong>: adds items to the end.</li>\n  <li>pop: removes the last item.</li>\n  <li>shift: removes the first item.</li>\n  <li>unshift: adds items to the front.</li>\n</ul>\n"
+  }
+]
