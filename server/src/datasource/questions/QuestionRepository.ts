@@ -8,8 +8,6 @@ type getByKeyType = (key: string) => Promise<Question[]>;
 
 export const getByKey: getByKeyType = async (key: string) => {
 
-	console.log('key', key);
-
 	if (!/^[a-z]+$/.test(key)) {
 		throw new Error('Invalid key format. Key must be a string of lowercase alphabetic characters.');
 	}
@@ -27,7 +25,7 @@ export const getByKey: getByKeyType = async (key: string) => {
 	});
 
 	try {
-		const questions = await store.get(key);
+		const questions = await store.get(`${key}.json`);
 		return JSON.parse(questions);
 	} catch (error) {
 		console.error('Error fetching questions:', error);

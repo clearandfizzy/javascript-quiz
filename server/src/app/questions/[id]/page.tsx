@@ -18,6 +18,9 @@ const QuestionsPage = async ({params}: QuestionsPageProps) => {
 	} catch (error) {
 		console.error("Error fetching questions:", error);
 	}
+	if (!questions){
+		return <></>
+	}
 
 	return (<>
 		<div

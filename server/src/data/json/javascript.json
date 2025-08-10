@@ -45,7 +45,7 @@
       "function"
     ],
     "correctIndex": 1,
-    "explanation": "\n<ul>\n  <li><strong>let</strong>: declares a variable visible only inside its block.</li>\n</ul>\n"
+    "explanation": "\n<ul>\n  <li><strong>let</strong>: declares a variable visible only inside its block and is not read-only.</li>\n</ul>\n"
   },
   {
     "id": 5,
