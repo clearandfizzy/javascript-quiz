@@ -8,7 +8,7 @@ type getByKeyType = (key: string) => Promise<Question[]>;
 
 export const getByKey: getByKeyType = async (key: string) => {
 
-	if (!/^[a-z]+$/.test(key)) {
+	if (!/^[a-z0-9]+$/.test(key)) {
 		throw new Error('Invalid key format. Key must be a string of lowercase alphabetic characters.');
 	}
 

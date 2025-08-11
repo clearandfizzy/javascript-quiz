@@ -4,4 +4,6 @@ export enum QuizType {
 	react = 'react',
 	tailwind = 'tailwind',
 	dev = 'dev',
+	flowers = 'flowers',
+	europeanTrees = 'europeanTrees',
 }
