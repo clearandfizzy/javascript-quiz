@@ -17,7 +17,8 @@ export const DisplayResult: React.FC = () => {
 	const displayResults = sharedResults.length > 0 ? sharedResults : results;
 
 	return (
-		<ul className="space-y-4">
+		<ul role={'table'}
+			className="space-y-4">
 			{displayResults.map((item, index) => (
 				<li key={index} className="p-4 border rounded flex justify-between items-center">
 					<span className="text-sm"><CopilotLink item={item} index={index}/></span>

@@ -15,7 +15,8 @@ export const FinalScore: React.FC = () => {
     const displayResults = sharedResults.length > 0 ? sharedResults : results;
 
     return (
-        <div className="test-score mt-4">
+        <div role={'contentinfo'}
+            className="test-score mt-4">
             <p>Your Test Score: {displayResults.reduce((total, result) => total + parseInt(result.correct ? "1" : "0"), 0)} / {displayResults.length}</p>
         </div>
     );

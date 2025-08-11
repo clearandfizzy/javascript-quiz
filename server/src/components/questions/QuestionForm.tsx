@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import * as QuizComponents from "@/components/questions/components";
 import {Question} from "@/types/QuestionType";
 import {useQuestions} from "@/components/context/QuestionProvider";
@@ -10,6 +10,7 @@ import {useOnSubmit} from "@/components/questions/lib/useOnSubmit";
 import {useQuestionIndex} from "@/components/questions/lib/useQuestionIndex";
 import useResetResults from "@/components/questions/lib/useResetResults";
 import useResetQuestions from "@/components/questions/lib/useResetQuestions";
+import {useFadeIn} from "@/components/questions/lib/useFadeIn";
 
 type QuestionFormProps = {
 	questions: Question[];
@@ -17,6 +18,7 @@ type QuestionFormProps = {
 
 export const QuestionForm = (props: QuestionFormProps) => {
 	const {questions} = props;
+	const [fadeIn, setFadeIn] = useState(false);
 	const {handleOnSubmit} = useOnSubmit();
 
 	const {
@@ -28,6 +30,7 @@ export const QuestionForm = (props: QuestionFormProps) => {
 	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 	const lastQuestionIndex = questions.length - 1;
 
+	useFadeIn(setFadeIn)
 	useResetQuestions();
 	useResetResults();
 	useQuestionIndex(questions[idx]);
@@ -37,10 +40,12 @@ export const QuestionForm = (props: QuestionFormProps) => {
 	if (lastQuestionIndex < 1 || currentQuestion === undefined)
 		return <div className="text-center text-[var(--color-header)]">Loading questions...</div>;
 
-	return (<form onSubmit={e => handleOnSubmit(e)}>
+	return (<form role={'form'}
+				  onSubmit={e => handleOnSubmit(e)}>
 		<fieldset className="border-0 p-0 m-0">
 			<legend className="text-xl mb-6 font-semibold">{currentQuestion.text}</legend>
-			<div className="space-y-3">
+			<div
+				className={`space-y-3 ${fadeIn ? 'fade-in' : ''}`}>
 				{currentQuestion.choices.map((answerText, index) => (
 					<QuizComponents.Choice
 						key={index}
@@ -50,13 +55,13 @@ export const QuestionForm = (props: QuestionFormProps) => {
 			</div>
 		</fieldset>
 		{answered && (
-			<>
+			<div aria-live="polite">
 				<QuizComponents.Explanation/>
 				<QuizComponents.LearnMore/>
 				<QuizComponents.NextButton lastQuestionIndex={lastQuestionIndex}/>
 				<QuizComponents.Timer/>
 				<QuizComponents.ResultsSoFar/>
-			</>
+			</div>
 		)}
 	</form>)
 }

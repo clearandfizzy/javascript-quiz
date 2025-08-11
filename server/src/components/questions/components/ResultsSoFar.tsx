@@ -5,7 +5,7 @@ export const ResultsSoFar: React.FC = () => {
 	const {results} = useResults();
 
 	return (
-		<>
+		<div role={'table'}>
 			<h3 className="font-bold">Results so far:</h3>
 			<ul className="list-disc ml-6">
 				{results.map((item, index) => (
@@ -14,7 +14,7 @@ export const ResultsSoFar: React.FC = () => {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };
 

@@ -8,7 +8,7 @@ interface CopilotLinkProps {
 }
 
 export const CopilotLink: React.FC<CopilotLinkProps> = ({item, index}) => (
-	<Link
+	<Link role={'link'}
 		href={`https://copilot.microsoft.com/?q=${encodeURIComponent(item.question.text)}`}
 		target="_blank"
 		rel="noopener noreferrer"

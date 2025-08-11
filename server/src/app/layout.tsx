@@ -13,17 +13,20 @@ export default function Layout({children}: { children: React.ReactNode }) {
 		</head>
 		<body className={'bg-[var(--color-bg)] text-[var(--color-text)]'}>
 		<div className="min-h-screen">
-			<header className="py-4 bg-[var(--color-header)] text-white text-center font-bold text-xl shadow">
+			<header className="py-4 bg-[var(--color-header)] text-white text-center font-bold text-xl shadow"
+					role="banner">
 				Quizzical
 			</header>
-			<main className="max-w-2xl mx-auto p-4">
+			<main role="main"
+				  className="max-w-2xl mx-auto p-4">
 				<ResultsProvider>
 					<QuestionsProvider>
 						{children}
 					</QuestionsProvider>
 				</ResultsProvider>
 			</main>
-			<footer className="py-2 text-center text-xs mt-8">
+			<footer role="contentinfo"
+					className="py-2 text-center text-xs mt-8">
 				&copy; {new Date().getFullYear()} Quizzical App. All rights reserved.
 			</footer>
 		</div>

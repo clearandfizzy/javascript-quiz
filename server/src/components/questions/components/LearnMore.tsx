@@ -8,6 +8,7 @@ export const LearnMore = () => {
 
 	return (<div className="my-2">
 		<Link
+			role={'link'}
 			href={`https://copilot.microsoft.com/?q=${encodeURIComponent(context + ': ' + currentQuestion!.text)}`}
 			target="_blank"
 			rel="noopener noreferrer"

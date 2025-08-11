@@ -17,10 +17,12 @@ export const Choice: React.FC<ChoiceProps> = ({answerIndex, answerText}) => {
 
 	return (
 		<label key={answerIndex}
+			   role={'button'}
 			   onKeyDown={(e) => onKeyDown(e)}
 			   tabIndex={(answered) ? -1 : answerIndex + 1}
-			   className="block cursor-pointer focus-ring">
+			   className={`block cursor-pointer focus-ring`}>
 			<input
+				role={"checkbox"}
 				tabIndex={-1}
 				type="radio"
 				name="choice"
