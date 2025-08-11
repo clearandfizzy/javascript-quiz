@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "text": "Alpine slopes, star-shaped white bracts, felted texture — which iconic flower?",
+    "choices": [
+      "Edelweiss",
+      "Snowdrop",
+      "Anemone",
+      "Cistus"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Edelweiss</strong>: woolly white bracts, alpine symbol.</li>\n        <li>Snowdrop: nodding white bells in late winter.</li>\n        <li>Anemone: petal-like sepals, not felted.</li>\n        <li>Cistus: crinkled petals, Mediterranean shrub.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 2,
+    "text": "Purple spikes in Provence fields with strong fragrance:",
+    "choices": [
+      "Lavender",
+      "Thyme",
+      "Sage",
+      "Violet"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Lavender</strong>: tall aromatic spikes, silvery foliage.</li>\n        <li>Thyme: low mats, tiny heads.</li>\n        <li>Sage: larger leaves, fewer spikes.</li>\n        <li>Violet: small low flowers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 3,
+    "text": "Carpeting spring woodlands in Britain with nodding blue bells:",
+    "choices": [
+      "Bluebell",
+      "Foxglove",
+      "Campanula",
+      "Iris"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Bluebell</strong>: drooping racemes, sweet scent.</li>\n        <li>Foxglove: tall tubular bells, summer.</li>\n        <li>Campanula: open bells, often upright.</li>\n        <li>Iris: large flag-like petals.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 4,
+    "text": "Which cornfield wildflower is vivid cobalt-blue with ragged petals?",
+    "choices": [
+      "Cornflower",
+      "Chicory",
+      "Scabious",
+      "Borage"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Cornflower</strong>: bright blue, frilly florets.</li>\n        <li>Chicory: paler sky-blue, open rays.</li>\n        <li>Scabious: pincushion head, lilac.</li>\n        <li>Borage: starry blue with black anthers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 5,
+    "text": "Scarlet papery petals with black base blotches in cereal fields:",
+    "choices": [
+      "Common poppy",
+      "Peony",
+      "Anemone coronaria",
+      "Red campion"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Common poppy</strong>: four silky scarlet petals, black heart.</li>\n        <li>Peony: many petals, bushy plant.</li>\n        <li>Anemone coronaria: Mediterranean garden species.</li>\n        <li>Red campion: pink, not scarlet.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 6,
+    "text": "First signs of late winter, white drooping bells with green tips:",
+    "choices": [
+      "Snowdrop",
+      "Lily of the valley",
+      "Star-of-Bethlehem",
+      "Wood anemone"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Snowdrop</strong>: single nodding white flower, Jan–Feb.</li>\n        <li>Lily of the valley: many bells on arching stem, later.</li>\n        <li>Star-of-Bethlehem: starry, upright.</li>\n        <li>Wood anemone: open white, not bell-shaped.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 7,
+    "text": "Low rosette, golden ray florets with hollow stems and milky sap:",
+    "choices": [
+      "Dandelion",
+      "Hawkweed",
+      "Oxeye daisy",
+      "Yarrow"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Dandelion</strong>: single head per stem; milky sap.</li>\n        <li>Hawkweed: often branched stems, hairier leaves.</li>\n        <li>Oxeye daisy: white rays with yellow disk.</li>\n        <li>Yarrow: ferny leaves, flat umbels.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 8,
+    "text": "Tiny white starry flowers forming flat-topped umbels in meadows:",
+    "choices": [
+      "Yarrow",
+      "Elderflower",
+      "Queen Anne’s lace",
+      "Meadowsweet"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Yarrow</strong>: flat corymbs; feathery leaves.</li>\n        <li>Elderflower: similar umbels but on a shrub.</li>\n        <li>Queen Anne’s lace: larger, lacy, carrot scent.</li>\n        <li>Meadowsweet: fluffy cream plumes, not flat.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 9,
+    "text": "Fragrant woodland plant with paired glossy leaves and white bells:",
+    "choices": [
+      "Lily of the valley",
+      "Solomon’s seal",
+      "Snowflake",
+      "Wild garlic"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Lily of the valley</strong>: arching raceme of white bells.</li>\n        <li>Solomon’s seal: tubular greenish flowers in pairs.</li>\n        <li>Snowflake: larger bells with green tips.</li>\n        <li>Wild garlic: starry white umbels, garlicky scent.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 10,
+    "text": "Low spring plant with primrose-yellow flowers on separate stalks from a rosette:",
+    "choices": [
+      "Primrose",
+      "Cowslip",
+      "Oxlip",
+      "Buttercup"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Primrose</strong>: solitary flowers from rosette.</li>\n        <li>Cowslip: many nodding blooms on one stem.</li>\n        <li>Oxlip: larger, looser cluster, paler.</li>\n        <li>Buttercup: glossy yellow, different leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 11,
+    "text": "Tall summer spikes with freckled tubular flowers, toxic if eaten:",
+    "choices": [
+      "Foxglove",
+      "Mullein",
+      "Bellflower",
+      "Hollyhock"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Foxglove</strong>: purple/pink tubes with spots.</li>\n        <li>Mullein: yellow, five-petaled, woolly leaves.</li>\n        <li>Bellflower: open bells, not tubes.</li>\n        <li>Hollyhock: large disk flowers on stalks.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 12,
+    "text": "Delicate blue, five-petaled flowers with yellow eye by streams:",
+    "choices": [
+      "Forget-me-not",
+      "Speedwell",
+      "Flax",
+      "Harebell"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Forget-me-not</strong>: tiny blue with yellow eye.</li>\n        <li>Speedwell: often four lobes, paler.</li>\n        <li>Flax: larger sky-blue, broader petals.</li>\n        <li>Harebell: nodding bells on wiry stems.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 13,
+    "text": "Early spring, white star-like flowers carpeting beech woods:",
+    "choices": [
+      "Wood anemone",
+      "Stitchwort",
+      "Star-of-Bethlehem",
+      "Snowdrop"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Wood anemone</strong>: many white tepals, leaf whorl.</li>\n        <li>Stitchwort: deeply notched petals.</li>\n        <li>Star-of-Bethlehem: green-striped backs, later.</li>\n        <li>Snowdrop: bell, not star-like.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 14,
+    "text": "Narrow leaves, purple-veined sepals, spurred flowers in cottage gardens:",
+    "choices": [
+      "Columbine",
+      "Larkspur",
+      "Vetch",
+      "Pansy"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Columbine</strong>: nodding spurred flowers.</li>\n        <li>Larkspur: spurred too, but different leaf form.</li>\n        <li>Vetch: pea-flowers on tendrils.</li>\n        <li>Pansy: flat-faced blooms.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 15,
+    "text": "Rosy-purple carpet on acidic moorland in late summer:",
+    "choices": [
+      "Heather (Calluna)",
+      "Bell heather",
+      "Sea thrift",
+      "Red clover"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Heather (Calluna)</strong>: tiny scale leaves; dense carpet.</li>\n        <li>Bell heather: larger bells, earlier bloom.</li>\n        <li>Sea thrift: coastal cushions.</li>\n        <li>Red clover: trifoliate leaves, meadows.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 16,
+    "text": "Pink pompon heads on coastal cliffs with grass-like leaves:",
+    "choices": [
+      "Sea thrift",
+      "Red valerian",
+      "Sea campion",
+      "Restharrow"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Sea thrift</strong>: tight pink globes; coastal.</li>\n        <li>Red valerian: looser clusters; taller stems.</li>\n        <li>Sea campion: white inflated calyx.</li>\n        <li>Restharrow: pea-flowers, spiny shrub.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 17,
+    "text": "Yellow nodding umbels on a single tall stem in spring pastures:",
+    "choices": [
+      "Cowslip",
+      "Primrose",
+      "Oxlip",
+      "Marsh marigold"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Cowslip</strong>: many blooms on one stalk.</li>\n        <li>Primrose: solitary stalks.</li>\n        <li>Oxlip: larger, fewer, paler.</li>\n        <li>Marsh marigold: buttercup-like in wetlands.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 18,
+    "text": "Dark blue, trumpet-shaped alpine flowers on short stems:",
+    "choices": [
+      "Gentian",
+      "Alpine aster",
+      "Campanula",
+      "Veronica"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Gentian</strong>: intense blue trumpets.</li>\n        <li>Alpine aster: daisy-like rays.</li>\n        <li>Campanula: bellflowers, usually paler.</li>\n        <li>Veronica: small spikes, not trumpets.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 19,
+    "text": "Large white floating blooms on ponds with round leaves:",
+    "choices": [
+      "White water lily",
+      "Water crowfoot",
+      "Bogbean",
+      "Arrowhead"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>White water lily</strong>: many white petals, floating leaves.</li>\n        <li>Water crowfoot: small white, feathery leaves.</li>\n        <li>Bogbean: fringed white, emergent.</li>\n        <li>Arrowhead: three white petals, arrow leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 20,
+    "text": "Bright yellow, shaggy composite with medicinal history from mountains:",
+    "choices": [
+      "Arnica",
+      "Hawkbit",
+      "Goat’s-beard",
+      "Tansy"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Arnica</strong>: orange-yellow rays, alpine meadows.</li>\n        <li>Hawkbit: smaller heads, low stems.</li>\n        <li>Goat’s-beard: larger seed clocks, tall.</li>\n        <li>Tansy: button-like disks, no rays.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 21,
+    "text": "Early spring, silky-haired purple blooms with prominent yellow center on calcareous grassland:",
+    "choices": [
+      "Pasqueflower",
+      "Crocus",
+      "Anemone",
+      "Hepatica"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Pasqueflower</strong>: silky hairs; Easter bloom.</li>\n        <li>Crocus: cup without hairs.</li>\n        <li>Anemone: usually white in woods.</li>\n        <li>Hepatica: three-lobed leaves, woodland.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 22,
+    "text": "Creamy, frothy plumes by stream edges with sweet almond scent:",
+    "choices": [
+      "Meadowsweet",
+      "Goat’s-rue",
+      "Valerian",
+      "Yarrow"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Meadowsweet</strong>: fluffy sprays; damp places.</li>\n        <li>Goat’s-rue: pea-flowers, not plumes.</li>\n        <li>Valerian: looser clusters, taller.</li>\n        <li>Yarrow: flat-topped, not fluffy.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 23,
+    "text": "Roadside pale-blue ray florets on stiff, branched stems; roots used as coffee substitute:",
+    "choices": [
+      "Chicory",
+      "Cornflower",
+      "Fleabane",
+      "Flax"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Chicory</strong>: sky-blue rays; rigid stems.</li>\n        <li>Cornflower: deeper cobalt, softer heads.</li>\n        <li>Fleabane: many fine rays, yellowish.</li>\n        <li>Flax: delicate, not stiffly branched.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 24,
+    "text": "Pink to purple spherical heads on trifoliate leaves with pale chevrons:",
+    "choices": [
+      "Red clover",
+      "Knapweed",
+      "Scabious",
+      "Sainfoin"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Red clover</strong>: rounded heads; trifoliate leaves.</li>\n        <li>Knapweed: thistle-like bracts, tougher heads.</li>\n        <li>Scabious: flat pincushion look.</li>\n        <li>Sainfoin: pea-flowers in spikes.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 25,
+    "text": "Fringed pink-purple flowers on upright stems; favorite of moths on chalk downland:",
+    "choices": [
+      "Pyramidal orchid",
+      "Bee orchid",
+      "Fragrant orchid",
+      "Marsh orchid"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Pyramidal orchid</strong>: conical dense head.</li>\n        <li>Bee orchid: bee-mimic lip, few flowers.</li>\n        <li>Fragrant orchid: narrower spikes, strong scent.</li>\n        <li>Marsh orchid: wetter habitats.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 26,
+    "text": "Brown-and-yellow lip mimicking a pollinator; small plant in dry grassland:",
+    "choices": [
+      "Bee orchid",
+      "Fly orchid",
+      "Toadflax",
+      "Hellebore"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Bee orchid</strong>: fuzzy, bee-like labellum.</li>\n        <li>Fly orchid: darker, slender flowers.</li>\n        <li>Toadflax: snapdragon-like, many small flowers.</li>\n        <li>Hellebore: greenish cups in woodland.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 27,
+    "text": "Large yellow slipper-shaped orchid, extremely rare in Europe:",
+    "choices": [
+      "Lady’s-slipper orchid",
+      "Marsh helleborine",
+      "Twayblade",
+      "Butterfly orchid"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Lady’s-slipper orchid</strong>: inflated yellow pouch.</li>\n        <li>Marsh helleborine: smaller, marbled lip.</li>\n        <li>Twayblade: tiny greenish flowers.</li>\n        <li>Butterfly orchid: white, slender lip.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 28,
+    "text": "Low mats with tiny purple flowers; spicy scent when crushed on dry hills:",
+    "choices": [
+      "Wild thyme",
+      "Marjoram",
+      "Bugle",
+      "Selfheal"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Wild thyme</strong>: prostrate mats, tiny leaves.</li>\n        <li>Marjoram: taller, looser heads.</li>\n        <li>Bugle: blue spikes, moist ground.</li>\n        <li>Selfheal: purple heads, broader leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 29,
+    "text": "White starry umbels with unmistakable garlic smell in spring woods:",
+    "choices": [
+      "Wild garlic (ramsons)",
+      "Cow parsley",
+      "Allium roseum",
+      "Snowflake"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Wild garlic</strong>: starry umbels; garlic aroma.</li>\n        <li>Cow parsley: carrot scent, no garlic.</li>\n        <li>Allium roseum: pink allium, not carpets.</li>\n        <li>Snowflake: bell flowers, no scent.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 30,
+    "text": "Large composite with white rays and yellow disk in hay meadows:",
+    "choices": [
+      "Oxeye daisy",
+      "Chamomile",
+      "Daisy (lawn)",
+      "Marguerite"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Oxeye daisy</strong>: tall stems; big heads.</li>\n        <li>Chamomile: feathery leaves, smaller heads.</li>\n        <li>Lawn daisy: tiny, prostrate.</li>\n        <li>Marguerite: garden cultivar group.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 31,
+    "text": "Soft aromatic foliage, orange-yellow daisy-like blooms used in salves:",
+    "choices": [
+      "Calendula (pot marigold)",
+      "Tagetes",
+      "Tansy",
+      "Hawkweed"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Calendula</strong>: orange daisies, long bloom.</li>\n        <li>Tagetes: different genus, stronger scent.</li>\n        <li>Tansy: button disks, no rays.</li>\n        <li>Hawkweed: smaller, wiry stems.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 32,
+    "text": "Low alpine with solitary purple daisies and yellow centers:",
+    "choices": [
+      "Alpine aster",
+      "Fleabane",
+      "Knapweed",
+      "Scabious"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Alpine aster</strong>: purple rays; alpine rocks.</li>\n        <li>Fleabane: many fine rays, often pinking.</li>\n        <li>Knapweed: thistle-like bracts.</li>\n        <li>Scabious: domed pincushion head.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 33,
+    "text": "Delicate bell on wiry stems in upland grasslands; also called Scottish bluebell:",
+    "choices": [
+      "Harebell",
+      "Bluebell",
+      "Campanula trachelium",
+      "Lobelia"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Harebell</strong>: thin stems; nodding pale bells.</li>\n        <li>Bluebell: dense nodding racemes in woods.</li>\n        <li>C. trachelium: larger nettle-leaved bellflower.</li>\n        <li>Lobelia: two-lipped, not bell-shaped.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 34,
+    "text": "White five-petaled flowers with deep notches; grassy banks in spring:",
+    "choices": [
+      "Greater stitchwort",
+      "Wood anemone",
+      "Chickweed",
+      "Saxifrage"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Greater stitchwort</strong>: deeply cut petals.</li>\n        <li>Wood anemone: tepal look, notched less.</li>\n        <li>Chickweed: tiny, sprawling.</li>\n        <li>Saxifrage: alpine cushions, different leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 35,
+    "text": "Tall spires with many hooded blue-purple flowers; extremely toxic:",
+    "choices": [
+      "Monkshood",
+      "Larkspur",
+      "Delphinium (garden)",
+      "Viper’s bugloss"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Monkshood</strong>: helmet-shaped flowers.</li>\n        <li>Larkspur: spurred petals, looser.</li>\n        <li>Delphinium: similar but garden hybrids.</li>\n        <li>Viper’s bugloss: rough, bristly, different form.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 36,
+    "text": "Showy purple standards and falls; sword-like leaves in fans:",
+    "choices": [
+      "German bearded iris",
+      "Siberian iris",
+      "Gladiolus",
+      "Asphodel"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>German bearded iris</strong>: beards on falls; rhizomes.</li>\n        <li>Siberian iris: slimmer flowers, grassy leaves.</li>\n        <li>Gladiolus: one-sided spikes of trumpets.</li>\n        <li>Asphodel: starry white, not iris.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 37,
+    "text": "Cup-shaped spring blooms emerging from grassy lawns; wide color range from bulbs:",
+    "choices": [
+      "Tulip",
+      "Crocus",
+      "Anemone blanda",
+      "Ranunculus"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Tulip</strong>: sturdy cups; taller stems.</li>\n        <li>Crocus: smaller cups, very early.</li>\n        <li>Anemone blanda: daisy-like rays.</li>\n        <li>Ranunculus: many-petaled buttercup kin.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 38,
+    "text": "Very early cups in late winter with orange stigmas in some species:",
+    "choices": [
+      "Crocus",
+      "Winter aconite",
+      "Snowdrop",
+      "Iris reticulata"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Crocus</strong>: goblet flowers; grassy leaves.</li>\n        <li>Winter aconite: yellow cups with ruff.</li>\n        <li>Snowdrop: bell, not cup.</li>\n        <li>Iris reticulata: small iris, different shape.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 39,
+    "text": "White or pale-pink five-petaled flowers on arching hedgerow shrubs with hooked thorns:",
+    "choices": [
+      "Dog-rose",
+      "Hawthorn",
+      "Blackthorn",
+      "Bramble"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Dog-rose</strong>: pinkish simple rose; hips later.</li>\n        <li>Hawthorn: clusters, lobed leaves.</li>\n        <li>Blackthorn: early white blossom on black twigs.</li>\n        <li>Bramble: blackberry flowers, different leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 40,
+    "text": "Shrub with white, sweetly scented flat umbels in early summer, later black berries:",
+    "choices": [
+      "Elderflower",
+      "Wayfaring tree",
+      "Guelder-rose",
+      "Rowan"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Elderflower</strong>: flat umbels; pithy stems.</li>\n        <li>Wayfaring tree: cymes; felted leaves.</li>\n        <li>Guelder-rose: lacecap style, lobed leaves.</li>\n        <li>Rowan: white clusters on pinnate leaves tree.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 41,
+    "text": "Bog plant with sticky, reddish leaves and tiny white flowers; carnivorous:",
+    "choices": [
+      "Sundew",
+      "Butterwort",
+      "Bog asphodel",
+      "Cotton grass"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Sundew</strong>: sticky tentacles; traps insects.</li>\n        <li>Butterwort: greasy leaves, purple flowers.</li>\n        <li>Bog asphodel: yellow starry spikes.</li>\n        <li>Cotton grass: fluffy white seed heads.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 42,
+    "text": "Tall coastal plant with loose pink-red clusters and grey-green leaves, often on walls:",
+    "choices": [
+      "Red valerian",
+      "Campion",
+      "Bindweed",
+      "Mallow"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Red valerian</strong>: nectar-rich, wall crevices.</li>\n        <li>Campion: five petals, not clustered.</li>\n        <li>Bindweed: white/pink trumpets, twining.</li>\n        <li>Mallow: flat five-petaled, lobed leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 43,
+    "text": "Yellow pea-flowers on very spiny shrubs lighting up heathlands:",
+    "choices": [
+      "Gorse",
+      "Broom",
+      "Dyer’s greenweed",
+      "Spartium"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Gorse</strong>: coconut-scented, spiny branches.</li>\n        <li>Broom: leafier, less spiny.</li>\n        <li>Dyer’s greenweed: smaller, slender stems.</li>\n        <li>Spartium: Spanish broom; regional.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 44,
+    "text": "Meadow composite with ragged purple rays and a hard scaly head (no spines):",
+    "choices": [
+      "Knapweed",
+      "Thistle",
+      "Scabious",
+      "Teasel"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Knapweed</strong>: ragged rays; hard involucre.</li>\n        <li>Thistle: spiny leaves and bracts.</li>\n        <li>Scabious: pincushion disk.</li>\n        <li>Teasel: spiny, cone heads.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 45,
+    "text": "Marshy ground, glossy buttercup-like yellow flowers with many sepals:",
+    "choices": [
+      "Marsh marigold",
+      "Kingcup",
+      "Globeflower",
+      "Lesser celandine"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Marsh marigold</strong>: big glossy yellow cups.</li>\n        <li>Kingcup: common name of same plant.</li>\n        <li>Globeflower: spherical, cooler uplands.</li>\n        <li>Lesser celandine: smaller, heart leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 46,
+    "text": "Low yellow pea-flowers forming bird-foot seed pods in sunny grasslands:",
+    "choices": [
+      "Bird’s-foot trefoil",
+      "Medick",
+      "Vetchling",
+      "Clover"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Bird’s-foot trefoil</strong>: yellow/orange blooms; “bird-foot” pods.</li>\n        <li>Medick: small clover-like heads.</li>\n        <li>Vetchling: larger single pea-flowers.</li>\n        <li>Clover: round heads, trifoliate leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 47,
+    "text": "White-blushed pink blooms on dunes with long creeping stems and arrow leaves:",
+    "choices": [
+      "Sea bindweed",
+      "Hedge bindweed",
+      "Sea campion",
+      "Glasswort"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Sea bindweed</strong>: silky pink-white trumpets on sand.</li>\n        <li>Hedge bindweed: larger, hedgerows inland.</li>\n        <li>Sea campion: white with inflated calyx.</li>\n        <li>Glasswort: succulent saltmarsh, tiny flowers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 48,
+    "text": "Feathery foliage with apple-like scent; small daisies used for tea:",
+    "choices": [
+      "Chamomile",
+      "Scentless mayweed",
+      "Feverfew",
+      "Oxeye daisy"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Chamomile</strong>: apple scent; feathery leaves.</li>\n        <li>Scentless mayweed: lacks aroma.</li>\n        <li>Feverfew: stronger scent, toothed leaves.</li>\n        <li>Oxeye daisy: much larger flowers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 49,
+    "text": "Coastal white flowers with inflated, veined calyx like a paper lantern:",
+    "choices": [
+      "Sea campion",
+      "Bladder campion",
+      "Sea rocket",
+      "Sea kale"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Sea campion</strong>: inflated calyx; cliff edges.</li>\n        <li>Bladder campion: inland, similar look.</li>\n        <li>Sea rocket: crucifer with fleshy leaves.</li>\n        <li>Sea kale: large leaves; white sprays.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 50,
+    "text": "Pink-purple heads with protruding stamens on tall stems; beloved by butterflies:",
+    "choices": [
+      "Field scabious",
+      "Greater knapweed",
+      "Thistle",
+      "Devil’s-bit scabious"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Field scabious</strong>: lilac pincushion; branched stems.</li>\n        <li>Greater knapweed: ragged rays, tougher head.</li>\n        <li>Thistle: spiny leaves and bracts.</li>\n        <li>Devil’s-bit scabious: later season, darker lilac.</li>\n      </ul>\n    "
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "text": "Which tree has lobed leaves and produces acorns in Europe?",
+    "choices": [
+      "Beech",
+      "Oak",
+      "Birch",
+      "Ash"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Oak</strong>: lobed leaves; fruits are acorns.</li>\n        <li>Beech: smooth gray bark; no acorns.</li>\n        <li>Birch: triangular leaves; catkins.</li>\n        <li>Ash: pinnate leaves; winged keys.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 2,
+    "text": "Silver birch bark is typically…",
+    "choices": [
+      "Dark and fissured",
+      "Coppery and peeling",
+      "White with black markings",
+      "Thick and corky"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>White with black markings</strong>: hallmark of silver birch.</li>\n        <li>Dark and fissured: oak/ash traits.</li>\n        <li>Coppery: more like paper birch types elsewhere.</li>\n        <li>Corky: cork oak, Mediterranean.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 3,
+    "text": "European beech leaves are best described as…",
+    "choices": [
+      "Pinnate with leaflets",
+      "Needle-like",
+      "Heart-shaped and toothed",
+      "Entire with wavy margin"
+    ],
+    "correctIndex": 3,
+    "explanation": "\n      <ul>\n        <li><strong>Entire with wavy margin</strong>: classic beech leaf.</li>\n        <li>Pinnate: ash, rowan, elder.</li>\n        <li>Needle-like: conifers.</li>\n        <li>Heart-shaped toothed: lime (linden).</li>\n      </ul>\n    "
+  },
+  {
+    "id": 4,
+    "text": "Which conifer in Europe has paired needles and large woody cones?",
+    "choices": [
+      "Scots pine",
+      "Yew",
+      "Juniper",
+      "Larch"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Scots pine</strong>: blue-green paired needles; cones.</li>\n        <li>Yew: flat needles; red arils not cones.</li>\n        <li>Juniper: prickly needles; tiny berry-like cones.</li>\n        <li>Larch: needles in clusters; cones upright.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 5,
+    "text": "Ash (Fraxinus excelsior) leaves are…",
+    "choices": [
+      "Simple and lobed",
+      "Needles in bundles",
+      "Opposite and pinnate",
+      "Round and leathery"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Opposite and pinnate</strong>: many leaflets per leaf.</li>\n        <li>Simple lobed: oak/maple.</li>\n        <li>Needles: conifers.</li>\n        <li>Round leathery: holm oak/olive types.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 6,
+    "text": "Which tree has helicopter-like winged seeds (samaras) in pairs?",
+    "choices": [
+      "Hornbeam",
+      "Maple/Sycamore",
+      "Elm",
+      "Hazel"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Maple/Sycamore</strong>: paired samaras \"helicopters\".</li>\n        <li>Hornbeam: papery bracts, not paired wings.</li>\n        <li>Elm: single round samaras.</li>\n        <li>Hazel: nuts in husks.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 7,
+    "text": "Horse chestnut can be recognized by…",
+    "choices": [
+      "Palmatel y compound leaves and spiky fruits",
+      "Simple serrated leaves and catkins",
+      "Needles and red berries",
+      "Lobed evergreen leaves"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Palmately compound leaves; spiky conkers</strong>: horse chestnut.</li>\n        <li>Serrated + catkins: birch/alder/willow.</li>\n        <li>Needles + red berries: yew arils.</li>\n        <li>Lobed evergreen: holm oak.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 8,
+    "text": "Which Mediterranean oak keeps tough evergreen leaves?",
+    "choices": [
+      "Sessile oak",
+      "Pedunculate oak",
+      "Holm oak",
+      "Turkey oak"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Holm oak</strong>: evergreen, leathery leaves.</li>\n        <li>Sessile/Pedunculate: deciduous oaks.</li>\n        <li>Turkey oak: deciduous with bristled lobes.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 9,
+    "text": "A tree with smooth gray bark, triangular beechnuts in prickly husks is…",
+    "choices": [
+      "European beech",
+      "Sweet chestnut",
+      "Hornbeam",
+      "Hazel"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>European beech</strong>: smooth bark; three-sided nuts.</li>\n        <li>Sweet chestnut: long toothed leaves; spiny burrs.</li>\n        <li>Hornbeam: fluted bark; three-lobed bracts.</li>\n        <li>Hazel: round leaves; clusters of nuts.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 10,
+    "text": "Which willow has long, narrow, drooping leaves and twigs?",
+    "choices": [
+      "Goat willow",
+      "Crack willow",
+      "Weeping willow",
+      "White willow"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Weeping willow</strong>: drooping shoots/leaves.</li>\n        <li>Goat: broad oval leaves.</li>\n        <li>Crack: brittle twigs; less pendulous.</li>\n        <li>White: long leaves but not strongly weeping.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 11,
+    "text": "Rowan (mountain ash) fruits are…",
+    "choices": [
+      "Winged samaras",
+      "Red/orange berry-like clusters",
+      "Spiny capsules",
+      "Nuts in cups"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Red/orange clusters</strong>: classic rowan berries.</li>\n        <li>Winged samaras: maples/ash/elm variants.</li>\n        <li>Spiny capsules: sweet chestnut burrs.</li>\n        <li>Nuts in cups: oaks/hazel.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 12,
+    "text": "Which European conifer is deciduous (drops needles in winter)?",
+    "choices": [
+      "Norway spruce",
+      "Silver fir",
+      "Yew",
+      "European larch"
+    ],
+    "correctIndex": 3,
+    "explanation": "\n      <ul>\n        <li><strong>European larch</strong>: deciduous conifer.</li>\n        <li>Spruce/fir/yew: evergreen.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 13,
+    "text": "Leaves opposite, heart-shaped with serrated edges and sweet-scented flowers describe…",
+    "choices": [
+      "Lime (linden) tree",
+      "Hornbeam",
+      "Birch",
+      "Elm"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Lime (linden)</strong>: heart-shaped, fragrant bloom.</li>\n        <li>Hornbeam: alternate; fluted trunk.</li>\n        <li>Birch: triangular; white bark.</li>\n        <li>Elm: asymmetrical bases; rough leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 14,
+    "text": "Which tree shows winged corky ridges on young branches in Europe?",
+    "choices": [
+      "Field maple",
+      "Hornbeam",
+      "English oak",
+      "Spindle"
+    ],
+    "correctIndex": 3,
+    "explanation": "\n      <ul>\n        <li><strong>Spindle</strong>: often corky wings on stems.</li>\n        <li>Field maple: opposite leaves; no corky wings.</li>\n        <li>Hornbeam: fluted bark; alternate leaves.</li>\n        <li>English oak: typical ridged bark; no wings.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 15,
+    "text": "Which has catkins in late winter and round leaves with a heart-shaped base?",
+    "choices": [
+      "Hazel",
+      "Alder",
+      "Birch",
+      "Poplar"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Hazel</strong>: male catkins; round, softly hairy leaves.</li>\n        <li>Alder: catkins too, but glossy not hairy leaves.</li>\n        <li>Birch: triangular leaves; white bark.</li>\n        <li>Poplar: tall, fluttering leaves; sticky buds.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 16,
+    "text": "Plane tree identification key feature in cities is…",
+    "choices": [
+      "Peeling patchy bark",
+      "Red arils",
+      "Paired needles",
+      "Spiny burr fruits"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Peeling patchy bark</strong>: mottled plane trunks.</li>\n        <li>Red arils: yew.</li>\n        <li>Paired needles: pines.</li>\n        <li>Spiny burrs: chestnut.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 17,
+    "text": "Which European tree has “keys” (winged seed clusters) hanging in bunches?",
+    "choices": [
+      "Ash",
+      "Elm",
+      "Maple",
+      "Hornbeam"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Ash</strong>: bunches of single-winged keys.</li>\n        <li>Elm: round single samaras; not in large bunches.</li>\n        <li>Maple: paired samaras, not big bunches.</li>\n        <li>Hornbeam: three-lobed bracts around seeds.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 18,
+    "text": "Which tree often has diamond-shaped lenticels and sticky buds (esp. black poplar)?",
+    "choices": [
+      "Poplar",
+      "Willow",
+      "Birch",
+      "Alder"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Poplar</strong>: sticky buds; fluttering leaves.</li>\n        <li>Willow: flexible twigs; different buds.</li>\n        <li>Birch: white bark; small buds.</li>\n        <li>Alder: rounded leaves; woody cones.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 19,
+    "text": "Which broadleaf carries spiny burrs containing multiple shiny brown nuts?",
+    "choices": [
+      "Horse chestnut",
+      "Sweet chestnut",
+      "Beech",
+      "Hazel"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Sweet chestnut</strong>: many spines; several nuts per burr.</li>\n        <li>Horse chestnut: fewer, larger spines; 1–2 conkers.</li>\n        <li>Beech: small prickly husk; triangular nuts.</li>\n        <li>Hazel: papery husks, not spiny.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 20,
+    "text": "Norway spruce cones typically hang…",
+    "choices": [
+      "Upright on branches",
+      "Hanging downwards",
+      "Embedded in fleshy arils",
+      "Only on the ground"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Hanging downwards</strong>: spruce cones dangle.</li>\n        <li>Upright: fir and larch cones.</li>\n        <li>Arils: yew, not cones.</li>\n        <li>Ground only: not diagnostic.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 21,
+    "text": "Which tree’s leaves have a very asymmetrical base (one side lower)?",
+    "choices": [
+      "Elm",
+      "Hornbeam",
+      "Beech",
+      "Rowan"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Elm</strong>: classic uneven leaf base.</li>\n        <li>Hornbeam: regular base; strong veins.</li>\n        <li>Beech: smooth, wavy margins.</li>\n        <li>Rowan: pinnate leaflets.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 22,
+    "text": "Cork oak is identifiable by its…",
+    "choices": [
+      "Silver peeling bark",
+      "Thick corky bark",
+      "Red papery bark",
+      "Green smooth bark"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Thick corky bark</strong>: harvested for cork.</li>\n        <li>Silver peeling: plane/birch mixups.</li>\n        <li>Red papery: not typical in Europe natives.</li>\n        <li>Green smooth: some young beeches/limes.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 23,
+    "text": "Yew seeds are surrounded by…",
+    "choices": [
+      "Woody cone scales",
+      "A red fleshy aril",
+      "Paired samaras",
+      "Spiny burrs"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Red fleshy aril</strong>: distinctive yew feature.</li>\n        <li>Woody cones: spruces/firs.</li>\n        <li>Paired samaras: maples.</li>\n        <li>Spiny burrs: chestnuts.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 24,
+    "text": "Hornbeam seeds are associated with…",
+    "choices": [
+      "Three-lobed papery bracts",
+      "Paired samaras",
+      "Round nutlets in cups",
+      "Red arils"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Three-lobed papery bracts</strong>: hornbeam signature.</li>\n        <li>Paired samaras: maples.</li>\n        <li>Nutlets in cups: oaks/hazels.</li>\n        <li>Arils: yew.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 25,
+    "text": "Scots pine mature bark near the crown often appears…",
+    "choices": [
+      "White and smooth",
+      "Orange and flaky",
+      "Black and furrowed",
+      "Green and waxy"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Orange and flaky</strong>: typical upper Scots pine bark.</li>\n        <li>White smooth: birch.</li>\n        <li>Black furrowed: old oak.</li>\n        <li>Green waxy: not a bark trait.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 26,
+    "text": "Which species has large sticky buds and palmate leaves with 5–7 leaflets?",
+    "choices": [
+      "Horse chestnut",
+      "Sycamore",
+      "Field maple",
+      "Elm"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Horse chestnut</strong>: big sticky buds; palmate leaves.</li>\n        <li>Sycamore: simple 5-lobed leaf, not leaflets.</li>\n        <li>Field maple: small lobed simple leaf.</li>\n        <li>Elm: asymmetrical base; rough texture.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 27,
+    "text": "Alder often grows by water and shows…",
+    "choices": [
+      "Woody cone-like catkins",
+      "Spiny burrs",
+      "Red arils",
+      "Paired samaras"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Woody cone-like catkins</strong>: persistent alder cones.</li>\n        <li>Spiny burrs: chestnut.</li>\n        <li>Red arils: yew.</li>\n        <li>Paired samaras: maples.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 28,
+    "text": "Which maple is common in Europe with large leaves and black leaf-spot in summer?",
+    "choices": [
+      "Sugar maple",
+      "Norway maple",
+      "Sycamore (Acer pseudoplatanus)",
+      "Japanese maple"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Sycamore (Acer pseudoplatanus)</strong>: common, tar-spot fungus.</li>\n        <li>Norway: also common; milky sap, different tar-spot pattern.</li>\n        <li>Sugar/Japanese: non-native ornamental types.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 29,
+    "text": "Which has very hard, fluted gray trunk and serrated leaves with strong veins?",
+    "choices": [
+      "Hornbeam",
+      "Beech",
+      "Elm",
+      "Hazel"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Hornbeam</strong>: fluted trunk; tough wood.</li>\n        <li>Beech: smooth trunk.</li>\n        <li>Elm: uneven leaf bases.</li>\n        <li>Hazel: softer, rounded leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 30,
+    "text": "Mediterranean umbrella-like crown with huge round cones and edible seeds describes…",
+    "choices": [
+      "Stone pine",
+      "Aleppo pine",
+      "Norway spruce",
+      "Larch"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Stone pine</strong>: umbrella crown; pine nuts.</li>\n        <li>Aleppo: smaller cones; irregular crown.</li>\n        <li>Spruce/larch: different forms.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 31,
+    "text": "Blackthorn (sloe) differs from hawthorn mainly by…",
+    "choices": [
+      "White spring blossom",
+      "Red berries",
+      "Thorns and blackish bark",
+      "Palmate leaves"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Thorns + blackish bark</strong>: blackthorn; blue sloes.</li>\n        <li>White blossom: both have it.</li>\n        <li>Red berries: hawthorn haws, not blackthorn.</li>\n        <li>Palmate leaves: not either.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 32,
+    "text": "Which native UK conifer has flat, soft needles and red arils?",
+    "choices": [
+      "Yew",
+      "Scots pine",
+      "Spruce",
+      "Larch"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Yew</strong>: flat needles; red arils.</li>\n        <li>Pine/spruce/larch: woody cones instead.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 33,
+    "text": "Wild cherry in spring is notable for…",
+    "choices": [
+      "Catkins before leaves",
+      "Masses of white blossom",
+      "Red arils",
+      "Spiny burrs"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Masses of white blossom</strong>: wild cherry show.</li>\n        <li>Catkins: birch, hazel, alder, willow.</li>\n        <li>Arils: yew.</li>\n        <li>Burrs: chestnut.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 34,
+    "text": "Which species has opposite leaves and produces winged fruits in clusters, often invasive riversides?",
+    "choices": [
+      "Sycamore maple",
+      "Ash",
+      "Alder",
+      "Box elder (Acer negundo)"
+    ],
+    "correctIndex": 3,
+    "explanation": "\n      <ul>\n        <li><strong>Box elder</strong>: opposite leaves; prolific samaras.</li>\n        <li>Sycamore: opposite too but simple leaves.</li>\n        <li>Ash: opposite pinnate keys, different clusters.</li>\n        <li>Alder: alternate leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 35,
+    "text": "Which olive-family evergreen with narrow silvery leaves is common in Mediterranean Europe?",
+    "choices": [
+      "Olive",
+      "Holm oak",
+      "Cork oak",
+      "Stone pine"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Olive</strong>: narrow gray-green, opposite leaves.</li>\n        <li>Holm/Cork: oaks with tougher leaves.</li>\n        <li>Stone pine: needles.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 36,
+    "text": "Which tree’s leaf underside is white, giving canopy a two-tone shimmering effect?",
+    "choices": [
+      "White poplar",
+      "Aspen",
+      "Silver birch",
+      "Lime"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>White poplar</strong>: white felted undersides.</li>\n        <li>Aspen: pale underside but not white felted.</li>\n        <li>Silver birch: pale bark, not leaf underside.</li>\n        <li>Lime: lighter underside but not felted white.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 37,
+    "text": "European aspen leaves are roundish and tremble due to…",
+    "choices": [
+      "Flat leaf stalks",
+      "Windy habitats only",
+      "Leaf hairs",
+      "Sticky resin"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Flat leaf stalks</strong>: petiole causes flutter.</li>\n        <li>Windy sites: exaggerates but not cause.</li>\n        <li>Leaf hairs: not key here.</li>\n        <li>Resin: conifer trait.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 38,
+    "text": "Which cypress has tall columnar form commonly used as windbreaks in Mediterranean?",
+    "choices": [
+      "Lawson cypress",
+      "Monterey cypress",
+      "Italian cypress",
+      "Juniper"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Italian cypress</strong>: very columnar habit.</li>\n        <li>Lawson/Monterey: broader crowns.</li>\n        <li>Juniper: shrubs/trees; not so columnar.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 39,
+    "text": "Which species has distinctive papery peels revealing green, cream, and brown patches?",
+    "choices": [
+      "London plane",
+      "Silver birch",
+      "Sycamore",
+      "Whitebeam"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>London plane</strong>: mottled peeling bark.</li>\n        <li>Birch: white bark strips but different pattern.</li>\n        <li>Sycamore: less patchy; rough plates.</li>\n        <li>Whitebeam: smoother gray bark.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 40,
+    "text": "Whitebeam leaves are notable for…",
+    "choices": [
+      "Silvery felted undersides",
+      "Deep lobes",
+      "Pinnate leaflets",
+      "Needles in clusters"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Silvery felted undersides</strong>: “white” beam.</li>\n        <li>Deep lobes: oak/maple.</li>\n        <li>Pinnate: ash/rowan.</li>\n        <li>Needles: conifers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 41,
+    "text": "Mediterranean strawberry tree (Arbutus) is recognizable by…",
+    "choices": [
+      "Red peeling bark and red strawberry-like fruits",
+      "Spiny burrs",
+      "Paired samaras",
+      "Catkins"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>Red peeling bark; strawberry-like fruits</strong>: Arbutus.</li>\n        <li>Spiny burrs: chestnut.</li>\n        <li>Paired samaras: maple.</li>\n        <li>Catkins: birch/alder/willow/hazel.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 42,
+    "text": "Which elm native to Europe has large leaves and a broad crown in upland areas?",
+    "choices": [
+      "English elm",
+      "Wych elm",
+      "Siberian elm",
+      "Field elm"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Wych elm</strong>: big leaves; upland/rocky sites.</li>\n        <li>English/Field: smaller leaves; suckering forms.</li>\n        <li>Siberian: non-native.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 43,
+    "text": "Goat willow (pussy willow) is famous for…",
+    "choices": [
+      "Red arils",
+      "Showy silver catkins in early spring",
+      "Huge spiny cones",
+      "Paired samaras"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Showy silver catkins</strong>: “pussy willow”.</li>\n        <li>Arils: yew.</li>\n        <li>Spiny cones: not a thing.</li>\n        <li>Samaras: maples/ash/elm.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 44,
+    "text": "Which tree shows large, hand-shaped simple leaves and paired samaras with a wide angle?",
+    "choices": [
+      "Sycamore maple",
+      "Norway maple",
+      "Field maple",
+      "Plane"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Norway maple</strong>: wide-angle paired samaras; milky sap.</li>\n        <li>Sycamore: more closed-angle samaras.</li>\n        <li>Field: smaller leaves, rounded lobes.</li>\n        <li>Plane: balls of achenes, not samaras.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 45,
+    "text": "Which riparian tree has long catkins and narrow lanceolate leaves with silvery sheen?",
+    "choices": [
+      "White willow",
+      "Alder",
+      "Poplar",
+      "Hazel"
+    ],
+    "correctIndex": 0,
+    "explanation": "\n      <ul>\n        <li><strong>White willow</strong>: long narrow silvery leaves.</li>\n        <li>Alder: rounder leaves; cones.</li>\n        <li>Poplar: triangular/round leaves; sticky buds.</li>\n        <li>Hazel: round hairy leaves.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 46,
+    "text": "Mediterranean evergreen with very small, opposite, aromatic leaves and black pods?",
+    "choices": [
+      "Olive",
+      "Carob",
+      "Cypress",
+      "Holly"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Carob</strong>: leathery leaves; long dark pods.</li>\n        <li>Olive: narrow leaves; drupes.</li>\n        <li>Cypress: scale leaves; cones.</li>\n        <li>Holly: spiny evergreen leaves; red berries.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 47,
+    "text": "Holly identification feature for fruits/leaves:",
+    "choices": [
+      "Blue berries and smooth leaves",
+      "Red berries and spiny evergreen leaves",
+      "Winged seeds and lobed leaves",
+      "Catkins and hairy leaves"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Red berries + spiny evergreen leaves</strong>: holly.</li>\n        <li>Blue berries: not holly in Europe.</li>\n        <li>Winged seeds: maples.</li>\n        <li>Catkins: birch/alder/willow/hazel.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 48,
+    "text": "Which oak has acorns sitting directly on twigs (no long stalks)?",
+    "choices": [
+      "Pedunculate oak",
+      "Sessile oak",
+      "Turkey oak",
+      "Holm oak"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Sessile oak</strong>: acorns sessile on twigs.</li>\n        <li>Pedunculate: acorns on long stalks.</li>\n        <li>Turkey: bristly cup scales; on stalks.</li>\n        <li>Holm: evergreen; variable stalks.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 49,
+    "text": "Which plane tree fruiting structure is typical?",
+    "choices": [
+      "Large paired samaras",
+      "Clusters of spiky balls on stalks",
+      "Red fleshy arils",
+      "Woody cones"
+    ],
+    "correctIndex": 1,
+    "explanation": "\n      <ul>\n        <li><strong>Clusters of spiky balls</strong>: plane achenes.</li>\n        <li>Paired samaras: maples.</li>\n        <li>Arils: yew.</li>\n        <li>Woody cones: conifers.</li>\n      </ul>\n    "
+  },
+  {
+    "id": 50,
+    "text": "Which Mediterranean pine has slender needles and irregular open crown; common on coasts?",
+    "choices": [
+      "Stone pine",
+      "Scots pine",
+      "Aleppo pine",
+      "Black pine"
+    ],
+    "correctIndex": 2,
+    "explanation": "\n      <ul>\n        <li><strong>Aleppo pine</strong>: slender needles; open crown; coastal.</li>\n        <li>Stone pine: umbrella crown; big cones.</li>\n        <li>Scots pine: orange bark; northern range.</li>\n        <li>Black pine: stout needles; darker bark.</li>\n      </ul>\n    "
+  }
+]

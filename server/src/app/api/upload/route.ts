@@ -2,13 +2,11 @@ import {getStore} from "@netlify/blobs";
 import {isAuthorized} from "@/components/api/upload/authorization";
 import fs from 'fs';
 import path from 'path';
+import {isDevOnly} from "@/components/api/upload/devonly";
 
 const POST = async (request: Request) => {
+	isDevOnly();
 	isAuthorized(request.headers.get("Authorization"));
-	// i want this to only work on localhost
-	if (process.env.NODE_ENV !== 'development') {
-		return new Response("Forbidden", {status: 403, headers: {"Content-Type": "application/json"}});
-	}
 
 	const uploadsDir = path.join(process.cwd(), 'src/data/json');
 	const files = fs.readdirSync(uploadsDir);
