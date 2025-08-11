@@ -2,13 +2,12 @@
 
 import React from "react";
 import {config as dataConfig} from "@/data/config";
-import {useQuestions} from "@/components/context/QuestionProvider";
-import {useRouter} from "next/navigation";
-import {urlConfig} from "@/url.config";
+import {useOnKeyDown} from "@/components/landing/lib/useOnKeyDown";
+import {useQuestionClick} from "@/components/landing/lib/useQuestionClick";
 
 export const TableBody = () => {
-	const {setQuestionKey} = useQuestions();
-	const router = useRouter();
+	const {onKeyDown} = useOnKeyDown();
+	const {onQuestionClick} = useQuestionClick();
 
 	if (!dataConfig || dataConfig.length === 0) {
 		return (
@@ -22,19 +21,19 @@ export const TableBody = () => {
 		);
 	}
 
-	const handleQuestionClick = (key: string) => {
-		console.log('handleQuestionClick', key);
-		setQuestionKey(key);
-		router.push(`${urlConfig.endPoints.questions.replace('[id]', key)}`);
-	}
-
 	return (<tbody>{
-		dataConfig.map((item) => (
-			<tr key={item.key} className="">
-				<td className="text-left px-4 py-2">
+		dataConfig.map((item, index) => (
+			<tr key={item.key}
+				onKeyDown={(e) => onKeyDown(e, item.key)}
+				tabIndex={index + 1}
+				className="focus-ring">
+				<td tabIndex={-1}
+					className="text-left px-4 py-2 w-[250]">
 					<button
-						onClick={() => handleQuestionClick(item.key)}
-						className="hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)]"
+						tabIndex={-1}
+						onClick={() => onQuestionClick(item.key)}
+						onKeyDown={(e) => onKeyDown(e, item.key)}
+						className="hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)] "
 					>{item.label}</button>
 				</td>
 				<td className="px-4 py-2">

@@ -16,7 +16,9 @@ export const useHandleChoice = () => {
 
 	const {results, setResults} = useResults();
 
-	const handleChoice = (answerIndex: number) => {
+	const onChoice = (answerIndex: number) => {
+		window.scrollTo({ top: screen.height, behavior: "smooth" });
+
 		if (answered) return;
 
 		setSelected(answerIndex);
@@ -42,5 +44,5 @@ export const useHandleChoice = () => {
 		]);
 	};
 
-	return {handleChoice};
+	return {onChoice};
 };

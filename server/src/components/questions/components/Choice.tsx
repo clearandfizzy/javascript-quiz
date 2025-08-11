@@ -3,6 +3,7 @@
 import React from "react";
 import {useQuestions} from "@/components/context/QuestionProvider";
 import {useHandleChoice} from "@/components/questions/lib/useHandleChoice";
+import {useHandleKeyDown} from "@/components/questions/lib/useKeyDown";
 
 interface ChoiceProps {
 	answerIndex: number;
@@ -11,17 +12,22 @@ interface ChoiceProps {
 
 export const Choice: React.FC<ChoiceProps> = ({answerIndex, answerText}) => {
 	const {answered, selected} = useQuestions();
-	const {handleChoice} = useHandleChoice();
+	const {onChoice} = useHandleChoice();
+	const {onKeyDown} = useHandleKeyDown();
 
 	return (
-		<label key={answerIndex} className="block cursor-pointer">
+		<label key={answerIndex}
+			   onKeyDown={(e) => onKeyDown(e, answerIndex)}
+			   tabIndex={(answered) ? -1 : answerIndex + 1}
+			   className="block cursor-pointer focus-ring">
 			<input
+				tabIndex={-1}
 				type="radio"
 				name="choice"
 				value={answerIndex}
 				checked={selected === answerIndex}
 				disabled={answered}
-				onChange={() => handleChoice(answerIndex)}
+				onChange={() => onChoice(answerIndex)}
 				className="hidden peer"
 			/>
 			<span

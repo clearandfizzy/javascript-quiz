@@ -14,7 +14,7 @@ export const NextButton: React.FC<NextButtonProps> = ({lastQuestionIndex}) => {
 		<>
 			<button
 				onClick={() => handleNextButton(lastQuestionIndex)}
-				className="mt-4 w-full hover:cursor-pointer px-5 py-4 bg-blue-600 text-white rounded font-semibold shadow hover:bg-blue-700 transition"
+				className="focus-ring mt-4 w-full hover:cursor-pointer px-5 py-4 bg-blue-600 text-white rounded font-semibold shadow hover:bg-blue-700 transition"
 			>
 				Next
 			</button>

@@ -11,14 +11,9 @@ type QuestionsPageProps = {
 const QuestionsPage = async ({params}: QuestionsPageProps) => {
 	const [p] = await Promise.all([params]);
 	const id = p.id as string;
-	let questions: Question[] = [];
+	let questions: Question[] = await getByKey(id);
 
-	try {
-		questions = await getByKey(id);
-	} catch (error) {
-		console.error("Error fetching questions:", error);
-	}
-	if (!questions){
+	if (!questions) {
 		return <></>
 	}
 

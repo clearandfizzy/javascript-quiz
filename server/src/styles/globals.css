@@ -2,9 +2,10 @@
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/700.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 :root {
     --color-header: #2C3E50;
@@ -23,4 +24,10 @@
     --color-accent-lime: #A3D900; /* Lime Green (alternative accents) */
     --color-accent-amber: #FFC107; /* Bright Amber (alerts, urgency) */
     --color-link: #FF6F61;
+}
+
+@layer utilities {
+    .focus-ring {
+        @apply rounded focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2;
+    }
 }

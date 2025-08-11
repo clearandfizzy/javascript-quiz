@@ -11,7 +11,7 @@ export const LearnMore = () => {
 			href={`https://copilot.microsoft.com/?q=${encodeURIComponent(context + ': ' + currentQuestion!.text)}`}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="text-blue-600 underline hover:text-blue-800"
+			className="text-blue-600 underline hover:text-blue-800 py-4 focus-ring"
 		>
 			Learn more about this question (opens in a new tab)
 		</Link>
