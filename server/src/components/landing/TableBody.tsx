@@ -24,7 +24,7 @@ export const TableBody = () => {
 	return (<tbody>{
 		dataConfig.map((item, index) => (
 			<tr key={item.key}
-				onKeyDown={(e) => onKeyDown(e, item.key)}
+				onKeyDown={(e) => onKeyDown(e)}
 				tabIndex={index + 1}
 				className="focus-ring">
 				<td tabIndex={-1}
@@ -32,7 +32,7 @@ export const TableBody = () => {
 					<button
 						tabIndex={-1}
 						onClick={() => onQuestionClick(item.key)}
-						onKeyDown={(e) => onKeyDown(e, item.key)}
+						onKeyDown={(e) => onKeyDown(e)}
 						className="hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)] "
 					>{item.label}</button>
 				</td>
