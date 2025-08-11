@@ -5,5 +5,5 @@ export enum QuizType {
 	tailwind = 'tailwind',
 	dev = 'dev',
 	flowers = 'flowers',
-	europeanTrees = 'europeanTrees',
+	trees = 'trees',
 }
