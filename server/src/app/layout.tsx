@@ -9,13 +9,12 @@ export default function Layout({children}: { children: React.ReactNode }) {
 		<head>
 			<meta charSet="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<title>Quizzical App</title>
+			<title>Popário</title>
 		</head>
 		<body className={'bg-[var(--color-bg)] text-[var(--color-text)]'}>
 		<div className="min-h-screen">
 			<header className="py-4 bg-[var(--color-header)] text-white text-center font-bold text-xl shadow"
-					role="banner">
-				Quizzical
+					role="banner">Popário
 			</header>
 			<main role="main"
 				  className="max-w-2xl mx-auto p-4">
@@ -27,7 +26,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
 			</main>
 			<footer role="contentinfo"
 					className="py-2 text-center text-xs mt-8">
-				&copy; {new Date().getFullYear()} Quizzical App. All rights reserved.
+				&copy; {new Date().getFullYear()} Popário. All rights reserved.
 			</footer>
 		</div>
 		</body>

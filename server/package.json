@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.6",
+    "@fontsource/nunito": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
     "@netlify/blobs": "^10.0.8",
     "crypto-js": "^4.2.0",

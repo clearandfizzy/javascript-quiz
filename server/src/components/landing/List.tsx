@@ -21,7 +21,7 @@ export const List = () => {
 							tabIndex={-1}
 							onClick={() => onQuestionClick(item.key)}
 							onKeyDown={(e) => onKeyDown(e)}
-							className="hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)] "
+							className="shadow-2 hover:cursor-pointer rounded bg-[var(--color-button)] text-white p-4 w-full transition-colors hover:bg-[var(--color-button-hover)] "
 						>{item.label}</button>
 					</div>
 					<div className={'col-span-2'}>

@@ -7,7 +7,8 @@ export const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Roboto", "ui-sans-serif", "system-ui"],
+				nunito: ['Nunito', 'sans-serif'],
+				sans: ["Nunito", "ui-sans-serif", "system-ui"],
 			},
 			colors: {
 				header: 'var(--color-header)',

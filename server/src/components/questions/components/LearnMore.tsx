@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import {useQuestions} from "@/components/context/QuestionProvider";
+import {ClickIcon} from "@/components/questions/components/icons/Click";
 
 export const LearnMore = () => {
 	const {currentQuestion, questionKey} = useQuestions();
@@ -11,9 +12,10 @@ export const LearnMore = () => {
 			href={`https://copilot.microsoft.com/?q=${encodeURIComponent(questionKey + ': ' + currentQuestion!.text)}`}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="text-blue-600 underline py-4 focus-ring-active"
+			className="text-blue-600 underline py-4 focus-ring-active flex items-center"
 		>
-			Learn more about this question (opens in a new tab)
+			<ClickIcon />Learn more about this question
+
 		</Link>
 	</div>);
 }
