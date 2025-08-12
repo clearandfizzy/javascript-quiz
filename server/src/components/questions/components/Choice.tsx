@@ -20,7 +20,7 @@ export const Choice: React.FC<ChoiceProps> = ({answerIndex, answerText}) => {
 			   role={'button'}
 			   onKeyDown={(e) => onKeyDown(e)}
 			   tabIndex={(answered) ? -1 : answerIndex + 1}
-			   className={`block cursor-pointer focus-ring`}>
+			   className={`block cursor-pointer focus-ring-active`}>
 			<input
 				role={"checkbox"}
 				tabIndex={-1}
