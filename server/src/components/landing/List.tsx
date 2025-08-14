@@ -1,16 +1,18 @@
 'use client';
 import React from 'react';
-import {config as dataConfig} from "@/data/config";
+
 import {useOnKeyDown} from "@/components/landing/lib/useOnKeyDown";
 import {useQuestionClick} from "@/components/landing/lib/useQuestionClick";
+import {useSearchTerm} from "@/components/landing/lib/useSearchTerm";
 
 export const List = () => {
+	const {data} = useSearchTerm();
 	const {onKeyDown} = useOnKeyDown();
 	const {onQuestionClick} = useQuestionClick();
 
 	return (<>
 		{
-			dataConfig.map((item, index) => (
+			data.map((item, index) => (
 				<div key={index}
 					 onKeyDown={(e) => onKeyDown(e)}
 					 onClick={() => onQuestionClick(item.key)}

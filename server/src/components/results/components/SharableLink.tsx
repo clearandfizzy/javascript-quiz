@@ -12,9 +12,9 @@ export const SharableLink: React.FC = () => {
 
 	if (!shareUrl) return (<></>);
 
-	const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-		e.target.select();
-		navigator.clipboard.writeText(e.target.value)
+	const handleOnClick = () => {
+		console.log('Input focused');
+		navigator.clipboard.writeText(shareUrl)
 			.then(() => {
 				setCopied(true);
 				setTimeout(() => setCopied(false), 2000);
@@ -23,15 +23,17 @@ export const SharableLink: React.FC = () => {
 	};
 
 	return (<div className="mb-6 relative">
-		<span className="font-semibold">Shareable Link:</span>
-		<input type="text"
+		<input type="hidden"
 			   value={shareUrl}
 			   readOnly
 			   className="w-full mt-2 p-2 border rounded bg-gray-100 text-xs"
-			   onFocus={handleFocus}
 		/>
+		<button onClick={() => handleOnClick()}
+				className="shadow-2 hover:cursor-pointer rounded bg-[var(--color-accent-amber)] text-white bold p-4 w-full transition-colors hover:bg-[var(--color-accent-amber-hover)] "
+		>Share Quiz
+		</button>
 		{copied && (
-			<div className="absolute top-0 right-0 mt-2 mr-2 bg-green-500 text-white text-sm px-4 py-2 rounded shadow">
+			<div className="absolute top-0 right-0 mt-2 mr-2 bg-black text-white text-sm px-4 py-2 rounded shadow">
 				Copied!
 			</div>
 		)}

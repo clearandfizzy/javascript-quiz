@@ -14,7 +14,6 @@ const ResultsList: React.FC = () => {
 			<DisplayResult/>
 			<FinalScore/>
 			<RestartAndStartAgain/>
-			<SharableLink/>
 		</div>
 	);
 };
