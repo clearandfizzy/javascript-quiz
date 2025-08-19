@@ -1,3 +1,5 @@
+import {Question} from "@/types/QuestionType";
+
 export const randomizeAnswers = (questions: Question[]) => {
 	return questions.map((question: Question) => {
 		const choices = question.choices;
@@ -9,7 +11,7 @@ export const randomizeAnswers = (questions: Question[]) => {
 		}
 		question.choices = [...updateChoices];
 
-		question.correctIndex = question.choices.findIndex((choice, index) => {
+		question.correctIndex = question.choices.findIndex((choice) => {
 			return (choice === correctText)
 		}) ?? 0;
 
