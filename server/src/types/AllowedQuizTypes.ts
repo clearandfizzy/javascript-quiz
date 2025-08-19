@@ -1,4 +1,4 @@
-export enum QuizType {
+export enum AllowedQuizTypes {
 	javascript = 'javascript',
 	magento2 = 'magento2',
 	react = 'react',

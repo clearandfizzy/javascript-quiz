@@ -1,8 +1,8 @@
 "use server";
 import React from "react";
 import {QuestionForm} from "@/components/questions/QuestionForm";
-import {getByKey} from "@/datasource/questions/QuestionRepository";
 import {Question} from "@/types/QuestionType";
+import {QuestionRepository} from "@/datasource/questions/QuestionRepository";
 
 type QuestionsPageProps = {
 	params: Promise<any>
@@ -11,7 +11,7 @@ type QuestionsPageProps = {
 const QuestionsPage = async ({params}: QuestionsPageProps) => {
 	const [p] = await Promise.all([params]);
 	const id = p.id as string;
-	let questions: Question[] = await getByKey(id);
+	let questions: Question[] = await QuestionRepository().getByKey(id);
 
 	if (!questions) {
 		return <></>
