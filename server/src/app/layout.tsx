@@ -5,9 +5,6 @@ import {ResultsProvider} from "@/components/context/ResultsProvider";
 import {SearchProvider} from "@/components/context/SearchProvider";
 
 export default function Layout({children}: { children: React.ReactNode }) {
-
-
-
 	return (
 		<html lang="en">
 		<head>

@@ -20,6 +20,7 @@ export const QuestionForm = (props: QuestionFormProps) => {
 	const {questions} = props;
 	const [fadeIn, setFadeIn] = useState(false);
 	const {handleOnSubmit} = useOnSubmit();
+	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
 	const {
 		idx,
@@ -27,7 +28,6 @@ export const QuestionForm = (props: QuestionFormProps) => {
 		currentQuestion,
 	} = useQuestions();
 
-	const intervalRef = useRef<NodeJS.Timeout | null>(null);
 	const lastQuestionIndex = questions.length - 1;
 
 	useFadeIn(setFadeIn)
