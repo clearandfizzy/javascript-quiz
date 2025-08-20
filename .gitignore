@@ -7,3 +7,4 @@ settings/options/*.xml
 
 # Exclude installed plugins list
 settings/installed.txt
+/.idea/
