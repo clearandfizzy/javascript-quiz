@@ -3,18 +3,18 @@ import {useRouter} from "next/navigation";
 import {urlConfig} from "@/url.config";
 import {useParams} from "next/navigation";
 
-type HandleNextButtonType = (lastQuestionIndex: number) => void;
+type HandleNextButtonType = () => void;
 
 export const useNextButton = () => {
 
 	const params = useParams();
 	const id = params.id as string;
-	const {setAnswered, setSelected, idx, setIdx} = useQuestions();
+	const {setAnswered, setSelected, idx, setIdx, questionLimit} = useQuestions();
 	const router = useRouter();
 
-	const handleNextButton: HandleNextButtonType = (lastQuestionIndex) => {
+	const handleNextButton: HandleNextButtonType = () => {
 		window.scrollTo({top: 0, behavior: 'smooth'});
-		if (idx === lastQuestionIndex) {
+		if (idx === questionLimit) {
 			router.push(urlConfig.endPoints.results.replace('[id]',id));
 			return;
 		}

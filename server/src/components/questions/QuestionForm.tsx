@@ -26,18 +26,19 @@ export const QuestionForm = (props: QuestionFormProps) => {
 		idx,
 		answered,
 		currentQuestion,
+		questionLimit
 	} = useQuestions();
 
-	const lastQuestionIndex = questions.length - 1;
+	const limitedQuestions = questions.slice(0, questionLimit);
 
 	useFadeIn(setFadeIn)
 	useResetQuestions();
 	useResetResults();
-	useQuestionIndex(questions[idx]);
+	useQuestionIndex(limitedQuestions[idx]);
 	useTimer();
-	useInterval({props: {lastQuestionIndex, idx, intervalRef}});
+	useInterval({props: {intervalRef}});
 
-	if (lastQuestionIndex < 1 || currentQuestion === undefined)
+	if (limitedQuestions.length < 1 || currentQuestion === undefined)
 		return <div className="text-center text-[var(--color-header)]">Loading questions...</div>;
 
 	return (<form role={'form'}
@@ -47,10 +48,9 @@ export const QuestionForm = (props: QuestionFormProps) => {
 			<div
 				className={`space-y-3 ${fadeIn ? 'fade-in' : ''}`}>
 				{currentQuestion.choices.map((answerText, index) => (
-					<QuizComponents.Choice
-						key={index}
-						answerIndex={index}
-						answerText={answerText}/>
+					<QuizComponents.Choice key={index}
+										   answerIndex={index}
+										   answerText={answerText}/>
 				))}
 			</div>
 		</fieldset>
@@ -58,7 +58,7 @@ export const QuestionForm = (props: QuestionFormProps) => {
 			<div aria-live="polite">
 				<QuizComponents.Explanation/>
 				<QuizComponents.LearnMore/>
-				<QuizComponents.NextButton lastQuestionIndex={lastQuestionIndex}/>
+				<QuizComponents.NextButton/>
 				<QuizComponents.Timer/>
 				<QuizComponents.ResultsSoFar/>
 			</div>

@@ -1,9 +1,8 @@
 import React, {useEffect} from "react";
+import {useQuestions} from "@/components/context/QuestionProvider";
 
 type useIntervalProps = {
 	props: {
-		lastQuestionIndex: number;
-		idx: number;
 		intervalRef: React.MutableRefObject<NodeJS.Timeout | null>;
 	}
 }
@@ -11,10 +10,11 @@ type useIntervalProps = {
 type useIntervalType = ({props}: useIntervalProps) => void;
 
 export const useInterval: useIntervalType = ({props}) => {
-	const {lastQuestionIndex, idx, intervalRef} = props;
+	const {intervalRef} = props;
+	const {questionLimit, idx} = useQuestions();
 
 	useEffect(() => {
-		if (idx === lastQuestionIndex && intervalRef.current) {
+		if (idx === questionLimit && intervalRef.current) {
 			clearInterval(intervalRef.current);
 		}
 	}, [idx]);

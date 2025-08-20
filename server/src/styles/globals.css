@@ -35,11 +35,11 @@ html {
         width: fill-available;
     }
     .focus-ring-hover {
-        @apply rounded hover:cursor-pointer hover:focus:outline-none hover:ring-2 hover:ring-black hover:ring-offset-2
+        @apply rounded hover:cursor-pointer hover:focus:outline-none hover:ring-1 hover:ring-black hover:ring-offset-2
     }
 
     .focus-ring-active {
-        @apply rounded hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2
+        @apply rounded hover:cursor-pointer focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-2
     }
 
     .fade-in {

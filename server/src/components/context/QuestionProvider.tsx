@@ -21,6 +21,8 @@ export interface QuestionContextType {
 	setSecondsElapsed: (seconds: number | null) => void;
 	setCurrentQuestion: (question: Question | undefined) => void;
 	resetQuestions: () => void;
+	questionLimit: number;
+	setQuestionLimit: (limit: number) => void;
 }
 
 const QuestionsContext = createContext<QuestionContextType | undefined>(undefined);
@@ -34,6 +36,7 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 	const [selected, setSelected] = useState<number | undefined>(undefined);
 	const [timerStarted, setTimerStarted] = useState(false);
 	const [secondsElapsed, setSecondsElapsed] = useState<number | null>(null);
+	const [questionLimit, setQuestionLimit] = useState(25); // Default to 25 questions
 
 	const resetQuestions = () => {
 		setCurrentQuestion(undefined);
@@ -55,7 +58,8 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 			selected, setSelected,
 			timerStarted, setTimerStarted,
 			secondsElapsed, setSecondsElapsed,
-			resetQuestions
+			resetQuestions,
+			questionLimit, setQuestionLimit
 		}}>
 			{children}
 		</QuestionsContext.Provider>
