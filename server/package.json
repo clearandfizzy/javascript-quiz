@@ -1,9 +1,10 @@
 {
-  "name": "quiz",
+  "name": "popario",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "netlify": "netlify functions:serve",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -14,7 +15,9 @@
     "@fontsource/nunito": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
     "@netlify/blobs": "^10.0.8",
-    "crypto-js": "^4.2.0",
+    "@netlify/functions": "^4.2.2",
+    "netlify-cli": "^23.2.1",
+    "openai": "^5.13.1",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
@@ -24,19 +27,9 @@
     "@types/node": "^20.19.7",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.6.0",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^15.3.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "install": "^0.13.0",
     "next": "^15.4.5",
-    "npm": "^11.5.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwindcss": "^4",
-    "typescript": "~5.8.3",
-    "typescript-eslint": "^8.35.1"
+    "typescript": "~5.8.3"
   }
 }

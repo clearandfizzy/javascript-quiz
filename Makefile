@@ -15,6 +15,9 @@ login: ## Access container shell
 dev:
 	docker-compose exec ${BOX_REACTJS} bash -c "\
 			npm run dev"
+netlify: ## Deploy to Netlify
+	docker-compose exec ${BOX_REACTJS} bash -c "\
+			npx netlify functions:serve"
 
 compile: ## New task for file merging
 	make start

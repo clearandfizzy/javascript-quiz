@@ -14,5 +14,6 @@ services:
       - "9150:9150"
       - "9099:9099"
       - "8081:8081"
+      - "9999:9999"
     environment:
       - CHOKIDAR_USEPOLLING=true
