@@ -3,7 +3,6 @@
 import {Question} from "@/types/QuestionType";
 import {AllowedQuizTypes} from "@/types/AllowedQuizTypes";
 import {BlobStorageRepository} from "@/datasource/netlify/BlobStorageRepository";
-import {randomizeAnswers} from "@/datasource/questions/lib/randomizeAnswers";
 
 type getByKeyType = (key: string) => Promise<Question[]>;
 

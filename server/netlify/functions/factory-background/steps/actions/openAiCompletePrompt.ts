@@ -1,58 +1,44 @@
 import {ActionStep} from "../../types/BlueprintType";
-import {prompt} from '../../prompts/generateQuestion';
 import {PartialDocument} from "../../types/DocumentType";
-import OpenAI from "openai";
+import {OpenAiResponseType} from "../../types/OpenAiResponseType";
 
 export const openAiCompletePrompt: ActionStep = async (
 	doc: PartialDocument
 ) => {
 	console.log("Processing openAiCompletePrompt");
-	const openai = new OpenAI();
 
-	console.log("OpenAiCompletePrompt", `${prompt} ${doc.prompt}`,);
+	if (doc.openAiPayload === undefined) {
+		throw new Error("openAiPayload is undefined");
+	}
 
-	const response = await openai.responses.create({
-		model: "gpt-4o",
-		input: `${prompt} ${doc.prompt}`,
-		text: {
-			format: {
-				type: "json_schema",
-				name: "payload",
-				schema: {
-					type: "object",
-					additionalProperties: false,
-					required: ["questions"],
-					properties: {
-						questions: {
-							type: "array",
-							minItems: 25,
-							maxItems: 25,
-							items: {
-								type: "object",
-								additionalProperties: false,
-								required: ["id", "text", "choices", "correctIndex", "explanation"],
-								properties: {
-									id: {type: "integer", minimum: 1, maximum: 25},
-									text: {type: "string", minLength: 1},
-									choices: {
-										type: "array",
-										items: {type: "string", minLength: 1},
-										minItems: 4,
-										maxItems: 4
-									},
-									correctIndex: {type: "integer", minimum: 0, maximum: 3},
-									explanation: {type: "string", minLength: 1}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	});
+	const apiKey = process.env.OPENAI_API_KEY;
+	if (!apiKey) {
+		throw new Error("OPENAI_API_KEY environment variable is not set");
+	}
 
-	doc.openAiResponse = response.output_text;
+	let json: OpenAiResponseType | undefined;
+
+	try {
+		const response = await fetch("https://api.openai.com/v1/responses", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				"Authorization": `Bearer ${apiKey}`,
+			},
+			body: JSON.stringify(doc.openAiPayload),
+		});
+
+		console.log('OpenAI API response status:', response.status);
+
+		json = await response.json();
+	} catch (e) {
+		console.error("Error calling OpenAI API:", e);
+		throw e;
+	}
+
+	doc.openAiResponse = json?.output[0].content[0].text ?? '';
 
 	return doc;
 
 }
+

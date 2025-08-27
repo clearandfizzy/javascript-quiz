@@ -1,6 +1,10 @@
+import {Payload} from "./PayloadType";
+
 export type PartialDocument = {
 	eventBody: string;
-	prompt?: string;
+	label?: string;
+	topic?: string;
 	question?: string[];
 	openAiResponse?: string;
+	openAiPayload?: Payload;
 }

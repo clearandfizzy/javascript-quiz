@@ -14,8 +14,12 @@ export const validateEventBody: ValidationStep = async (
 	if (typeof json !== 'object' || json === null) {
 		throw new Error("eventBody must be a valid JSON object");
 	}
-	if (!json.prompt || typeof json.prompt !== 'string') {
+	if (!json.topic || typeof json.topic !== 'string') {
 		throw new Error("eventBody must contain a valid prompt string");
+	}
+
+	if (!json.label || typeof json.label !== 'string') {
+		throw new Error("eventBody must contain a valid label string");
 	}
 
 	return doc;

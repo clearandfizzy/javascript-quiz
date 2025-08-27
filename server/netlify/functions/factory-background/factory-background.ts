@@ -1,5 +1,7 @@
 import {PartialDocument} from "./types/DocumentType";
 import {blueprint as factory} from "./blueprint";
+import {saveQuestions} from "./steps/actions/saveQuestions";
+
 
 const handler = async (request: Request) => {
 
@@ -11,12 +13,11 @@ const handler = async (request: Request) => {
 		return step(await acc);
 	}, Promise.resolve(doc));
 
-
-	console.log(final);
+	await saveQuestions(final);
 
 	return new Response(JSON.stringify({
 		message: 'Factory Background',
-		data: final
+		data: "Success"
 	}), {
 		status: 200,
 		headers: {
