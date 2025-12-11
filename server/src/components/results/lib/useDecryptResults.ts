@@ -30,7 +30,7 @@ export const useDecryptResults = () => {
 		} else {
 			setSharedResults([]);
 		}
-	}, [hash, sharedResults.length, decryptResults, setSharedResults]);
+	}, [hash, decryptResults, setSharedResults]);
 
 	return {decryptResults};
 
