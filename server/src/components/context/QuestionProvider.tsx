@@ -1,6 +1,6 @@
 'use client';
 
-import React, {createContext, ReactNode, useContext, useState} from "react";
+import React, {createContext, ReactNode, useContext, useState, useMemo, useCallback} from "react";
 import {Question} from "@/types/QuestionType";
 
 export interface QuestionContextType {
@@ -38,7 +38,7 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 	const [secondsElapsed, setSecondsElapsed] = useState<number | null>(null);
 	const [questionLimit, setQuestionLimit] = useState(25); // Default to 25 questions
 
-	const resetQuestions = () => {
+	const resetQuestions = useCallback(() => {
 		setCurrentQuestion(undefined);
 		setIdx(0);
 		setScore(0);
@@ -46,21 +46,26 @@ export const QuestionsProvider = ({children}: { children: ReactNode }) => {
 		setSelected(undefined);
 		setTimerStarted(false);
 		setSecondsElapsed(null);
-	}
+	}, []);
+
+	const value = useMemo(() => ({
+		questionKey, setQuestionKey,
+		currentQuestion, setCurrentQuestion,
+		idx, setIdx,
+		score, setScore,
+		answered, setAnswered,
+		selected, setSelected,
+		timerStarted, setTimerStarted,
+		secondsElapsed, setSecondsElapsed,
+		resetQuestions,
+		questionLimit, setQuestionLimit
+	}), [
+		questionKey, currentQuestion, idx, score, answered, selected,
+		timerStarted, secondsElapsed, questionLimit, resetQuestions
+	]);
 
 	return (
-		<QuestionsContext.Provider value={{
-			questionKey, setQuestionKey,
-			currentQuestion, setCurrentQuestion,
-			idx, setIdx,
-			score, setScore,
-			answered, setAnswered,
-			selected, setSelected,
-			timerStarted, setTimerStarted,
-			secondsElapsed, setSecondsElapsed,
-			resetQuestions,
-			questionLimit, setQuestionLimit
-		}}>
+		<QuestionsContext.Provider value={value}>
 			{children}
 		</QuestionsContext.Provider>
 	);

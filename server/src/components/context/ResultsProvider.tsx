@@ -1,6 +1,6 @@
 'use client';
 
-import React, {createContext, useContext, useState, ReactNode} from "react";
+import React, {createContext, useContext, useState, ReactNode, useMemo, useCallback} from "react";
 import {Result} from "@/types/ResultType";
 
 interface ResultsContextType {
@@ -20,19 +20,21 @@ export const ResultsProvider = ({children}: { children: ReactNode }) => {
 	const [sharedResults, setSharedResults] = useState<Result[]>([]);
 	const [shareUrl, setShareUrl] = useState<string>("");
 
-	const resetResults = () => {
+	const resetResults = useCallback(() => {
 		setResults([]);
 		setSharedResults([]);
 		setShareUrl("");
-	};
+	}, []);
+
+	const value = useMemo(() => ({
+		results, setResults,
+		sharedResults, setSharedResults,
+		shareUrl, setShareUrl,
+		resetResults,
+	}), [results, sharedResults, shareUrl, resetResults]);
 
 	return (
-		<ResultsContext.Provider value={{
-			results, setResults,
-			sharedResults, setSharedResults,
-			shareUrl, setShareUrl,
-			resetResults,
-		}}>
+		<ResultsContext.Provider value={value}>
 			{children}
 		</ResultsContext.Provider>
 	);

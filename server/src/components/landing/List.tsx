@@ -5,7 +5,7 @@ import {useOnKeyDown} from "@/components/landing/lib/useOnKeyDown";
 import {useQuestionClick} from "@/components/landing/lib/useQuestionClick";
 import {useSearchTerm} from "@/components/landing/lib/useSearchTerm";
 
-export const List = () => {
+export const List = React.memo(() => {
 	const {data} = useSearchTerm();
 	const {onKeyDown} = useOnKeyDown();
 	const {onQuestionClick} = useQuestionClick();
@@ -13,12 +13,12 @@ export const List = () => {
 	return (<>
 		{
 			data.map((item, index) => (
-				<div key={index}
+				<div key={item.key}
 					 onKeyDown={(e) => onKeyDown(e)}
 					 onClick={() => onQuestionClick(item.key)}
 					 tabIndex={index + 1}
 					 className={'grid grid-cols-1 md:grid-cols-3 gap-4 p-4 focus-ring-hover focus-ring-active'}>
-					<div className={'col-span-1'} key={item.key}>
+					<div className={'col-span-1'}>
 						<button
 							tabIndex={-1}
 							onClick={() => onQuestionClick(item.key)}
@@ -35,4 +35,4 @@ export const List = () => {
 			))
 		}
 	</>);
-}
+});

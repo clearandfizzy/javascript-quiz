@@ -1,3 +1,4 @@
+import {useCallback} from "react";
 import {useResults} from "@/components/context/ResultsProvider";
 import {useQuestions} from "@/components/context/QuestionProvider";
 
@@ -16,7 +17,7 @@ export const useHandleChoice = () => {
 
 	const {results, setResults} = useResults();
 
-	const onChoice = (answerIndex: number) => {
+	const onChoice = useCallback((answerIndex: number) => {
 		window.scrollTo({ top: screen.height, behavior: "smooth" });
 
 		if (answered) return;
@@ -42,7 +43,11 @@ export const useHandleChoice = () => {
 				}
 			},
 		]);
-	};
+	}, [
+		answered, currentQuestion, results, score,
+		setAnswered, setSelected, setScore, setSecondsElapsed, 
+		setTimerStarted, setResults, timerStarted
+	]);
 
 	return {onChoice};
 };
