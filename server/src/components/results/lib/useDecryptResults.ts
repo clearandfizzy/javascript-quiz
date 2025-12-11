@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect} from "react";
+import {useEffect, useCallback} from "react";
 import CryptoJS from "crypto-js";
 import {Result} from "@/types/ResultType";
 import {useSearchParams} from "next/navigation";
@@ -11,7 +11,7 @@ export const useDecryptResults = () => {
 	const {sharedResults, setSharedResults} = useResults();
 	const hash = searchParams.get("hash");
 
-	const decryptResults = (hash: string): Result[] => {
+	const decryptResults = useCallback((hash: string): Result[] => {
 		try {
 			const bytes = CryptoJS.AES.decrypt(hash, 'sdkfjhdskjhfdskjh');
 			const decrypted = bytes.toString(CryptoJS.enc.Utf8);
@@ -19,7 +19,7 @@ export const useDecryptResults = () => {
 		} catch {
 			return [];
 		}
-	}
+	}, []);
 
 	useEffect(() => {
 		if (sharedResults.length > 0)
@@ -30,7 +30,7 @@ export const useDecryptResults = () => {
 		} else {
 			setSharedResults([]);
 		}
-	}, [hash]);
+	}, [hash, decryptResults, setSharedResults]);
 
 	return {decryptResults};
 

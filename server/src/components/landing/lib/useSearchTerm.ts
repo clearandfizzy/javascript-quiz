@@ -1,24 +1,17 @@
-import {useEffect, useState} from "react";
+import {useMemo} from "react";
 import {config as dataConfig} from "@/data/config";
 import {useSearchProvider} from "@/components/context/SearchProvider";
-import {DataConfigType} from "@/types/DataConfigType";
 
 export const useSearchTerm = () => {
-	const [data, setData] = useState<DataConfigType[]>([]);
 	const {searchTerm} = useSearchProvider();
 
-	useEffect(() => {
+	const data = useMemo(() => {
 		if (!searchTerm) {
-			setData(dataConfig);
-			return;
+			return dataConfig;
 		}
-
-		if (searchTerm) {
-			setData(dataConfig.filter(
-				item => item.key.toLowerCase().includes(searchTerm.toLowerCase())
-			));
-		}
-
+		
+		const lowerSearchTerm = searchTerm.toLowerCase();
+		return dataConfig.filter(item => item.key.toLowerCase().includes(lowerSearchTerm));
 	}, [searchTerm]);
 
 	return {data}

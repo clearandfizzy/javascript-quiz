@@ -17,5 +17,5 @@ export const useInterval: useIntervalType = ({props}) => {
 		if (idx === questionLimit && intervalRef.current) {
 			clearInterval(intervalRef.current);
 		}
-	}, [idx]);
+	}, [idx, questionLimit, intervalRef]);
 }

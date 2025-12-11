@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useRef, useState} from "react";
+import React, {useRef, useState, useMemo} from "react";
 import * as QuizComponents from "@/components/questions/components";
 import {Question} from "@/types/QuestionType";
 import {useQuestions} from "@/components/context/QuestionProvider";
@@ -29,7 +29,10 @@ export const QuestionForm = (props: QuestionFormProps) => {
 		questionLimit
 	} = useQuestions();
 
-	const limitedQuestions = questions.slice(0, questionLimit);
+	const limitedQuestions = useMemo(() => 
+		questions.slice(0, questionLimit),
+		[questions, questionLimit]
+	);
 
 	useFadeIn(setFadeIn)
 	useResetQuestions();

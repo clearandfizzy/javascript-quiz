@@ -1,6 +1,6 @@
 'use client';
 
-import {useEffect} from "react";
+import {useEffect, useCallback} from "react";
 import {useResults} from "@/components/context/ResultsProvider";
 import {Result} from "@/types/ResultType";
 import CryptoJS from "crypto-js";
@@ -17,10 +17,10 @@ export const useEncryptResults = () => {
 
 	const {results, setShareUrl} = useResults();
 
-	const encryptResults = (results: Result[]): string => {
+	const encryptResults = useCallback((results: Result[]): string => {
 		const str = JSON.stringify(results);
 		return CryptoJS.AES.encrypt(str, 'sdkfjhdskjhfdskjh').toString();
-	}
+	}, []);
 
 	useEffect(() => {
 		if (results.length > 0) {
@@ -30,6 +30,6 @@ export const useEncryptResults = () => {
 			const query = `?hash=${encodeURIComponent(hash)}`;
 			setShareUrl(`${baseUrl}${endpoint}${query}`);
 		}
-	}, [results]);
+	}, [results, id, encryptResults, setShareUrl]);
 
 }

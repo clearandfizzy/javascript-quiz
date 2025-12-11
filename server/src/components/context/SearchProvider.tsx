@@ -1,6 +1,6 @@
 'use client';
 
-import React, {createContext, useContext} from "react";
+import React, {createContext, useContext, useMemo} from "react";
 
 type SearchContextType = {
 	searchTerm: string;
@@ -20,8 +20,13 @@ export const useSearchProvider = () => {
 export const SearchProvider = ({children}: { children: React.ReactNode }) => {
 	const [searchTerm, setSearchTerm] = React.useState<string>("");
 
+	const value = useMemo(() => ({
+		searchTerm, 
+		setSearchTerm
+	}), [searchTerm]);
+
 	return (
-		<SearchContext.Provider value={{searchTerm, setSearchTerm}}>
+		<SearchContext.Provider value={value}>
 			{children}
 		</SearchContext.Provider>
 	);
